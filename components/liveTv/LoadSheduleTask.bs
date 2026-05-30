@@ -25,7 +25,7 @@ sub loadSchedule()
     resp = APIRequest(url)
     data = postJson(resp, FormatJson(params))
 
-    if data = invalid
+    if data = invalid or not isValid(data.Items)
         m.top.schedule = results
         return
     end if

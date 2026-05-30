@@ -1373,7 +1373,7 @@ sub onStateEvent(msg)
         if isStringEqual(node.selectedItemType, ItemType.TVCHANNEL)
             thisItem = {
                 id: node.id,
-                type: ItemType.RECORDING
+                type: ItemType.TVCHANNEL
             }
 
             MainAction.playItem(thisItem, { resetShuffle: true })
