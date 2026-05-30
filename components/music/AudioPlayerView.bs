@@ -89,7 +89,7 @@ sub setupScreenSaver()
     m.screenSaverAlbumAnimation = m.top.findNode("screenSaverAlbumAnimation")
     m.screenSaverAlbumCoverFadeIn = m.top.findNode("screenSaverAlbumCoverFadeIn")
 
-    ' Jellyfin Screensaver
+    ' PresserFin Screensaver
     m.PosterOne = m.top.findNode("PosterOne")
     m.PosterOne.uri = "pkg:/images/channel-poster_sd.jpg"
     m.BounceAnimation = m.top.findNode("BounceAnimation")

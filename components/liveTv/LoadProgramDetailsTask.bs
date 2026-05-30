@@ -21,7 +21,7 @@ sub loadProgramDetails()
     data = getJson(resp)
 
     if data = invalid
-        m.top.programDetails = {}
+        m.top.programDetails = invalid
         return
     end if
 

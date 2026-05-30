@@ -22,11 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build jellyfin-roku client project
+      - name: Build presserfin-roku client project
         run: npm run build
 
       - name: Save build output as artifact
         uses: actions/upload-artifact@v7
         with:
-          name: Jellyfin-Roku-dev-${{ github.sha }}
+          name: PresserFin-Roku-dev-${{ github.sha }}
           path: ${{ github.workspace }}/build/staging

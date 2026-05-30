@@ -5,8 +5,8 @@
 <context>
     <name>default</name>
     <message>
-        <source>192.168.1.100:8096 or https://example.com/jellyfin</source>
-        <translation>192.168.1.100:8096 oder https://example.com/jellyfin</translation>
+        <source>192.168.1.100:8096</source>
+        <translation>192.168.1.100:8096</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -479,8 +479,8 @@
         <extracomment>Title of KeyboardDialog when manually entering a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen verfügbaren Jellyfin-Server aus Ihrem lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen verfügbaren PresserFin-Server aus Ihrem lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -700,8 +700,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Verwende das generierte Startbildschirm-Bild als Hintergrund für die Jellyfin-Startseite. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Verwende das generierte Startbildschirm-Bild als Hintergrund für die PresserFin-Startseite. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -710,8 +710,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Alle Uhren in Jellyfin ausblenden. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Alle Uhren in PresserFin ausblenden. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -761,8 +761,8 @@
         <extracomment>Name of codec used in settings menu</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -964,8 +964,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Popup mit Neuigkeiten anzeigen, wenn Jellyfin auf eine neue Version aktualisiert wird.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Popup mit Neuigkeiten anzeigen, wenn PresserFin auf eine neue Version aktualisiert wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -1065,7 +1065,7 @@
     </message>
     <message>
         <source>Settings relating to the appearance of the Home screen and the program in general.</source>
-        <translation>Einstellungen, die sich auf das Aussehen des Startbildschirms und von Jellyfin im Allgemeinen beziehen.</translation>
+        <translation>Einstellungen, die sich auf das Aussehen des Startbildschirms und von PresserFin im Allgemeinen beziehen.</translation>
     </message>
     <message>
         <source>Settings that apply when Grid views are enabled.</source>
@@ -1171,8 +1171,8 @@
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
-        <source>Remember the currently logged in user and try to log them in again next time you start the Jellyfin app.</source>
-        <translation>Merke den aktuell angemeldeten Benutzer und versuche, ihn beim nächsten Start von Jellyfin erneut anzumelden.</translation>
+        <source>Remember the currently logged in user and try to log them in again next time you start the PresserFin app.</source>
+        <translation>Merke den aktuell angemeldeten Benutzer und versuche, ihn beim nächsten Start von PresserFin erneut anzumelden.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -1181,8 +1181,8 @@
         <extracomment>Message shown in OSD when no chapter data is returned by the API</extracomment>
     </message>
     <message>
-        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Pass die Anordnung der Abschnitte der Roku-Startansicht an den Startbildschirm des Webclients an. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
+        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Pass die Anordnung der Abschnitte der Roku-Startansicht an den Startbildschirm des Webclients an. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -1355,16 +1355,16 @@
         <translation>Album Interpret</translation>
     </message>
     <message>
-        <source>The selected Jellyfin server uses version</source>
-        <translation>Der gewählte Jellyfin-Server nutzt Version</translation>
+        <source>The selected PresserFin server uses version</source>
+        <translation>Der gewählte PresserFin-Server nutzt Version</translation>
     </message>
     <message>
         <source>The number of episodes that will play automatically after the selected episode. Requires &apos;Play next episode automatically&apos; server setting to be enabled.</source>
         <translation>Die Anzahl an Episoden die automatisch nach der gewählten Episode abgespielt werden. Benötigt, das die Option &quot;Nächste Episode automatisch abspielen&quot; auf dem Server aktiviert ist.</translation>
     </message>
     <message>
-        <source>or newer to use this app or install and use the Jellyfin Legacy app from Roku&apos;s Streaming Store</source>
-        <translation>oder neuer um diese App zu nutzen oder installiere und nutze die App &quot;Jellyfin Legacy&quot; von Roku&apos;s Streaming Store</translation>
+        <source>or newer to use this app or install and use the PresserFin Legacy app from Roku&apos;s Streaming Store</source>
+        <translation>oder neuer um diese App zu nutzen oder installiere und nutze die App &quot;PresserFin Legacy&quot; von Roku&apos;s Streaming Store</translation>
     </message>
     <message>
         <source>which is not supported by this app. Please update the server to</source>
@@ -1507,8 +1507,8 @@
         <translation>Von vorne beginnen.</translation>
     </message>
     <message>
-        <source>Settings relating to how Jellyfin should handle media segments.</source>
-        <translation>Einstellungen, wie Jellyfin mit Mediensegmenten umgehen sollte.</translation>
+        <source>Settings relating to how PresserFin should handle media segments.</source>
+        <translation>Einstellungen, wie PresserFin mit Mediensegmenten umgehen sollte.</translation>
     </message>
     <message>
         <source>No Results Found</source>
@@ -1611,8 +1611,8 @@
         <translation>Filter verwerfen</translation>
     </message>
     <message>
-        <source>Forget applied library filters when Jellyfin is closed.</source>
-        <translation>Verwerfen von angewendeten Filter auf Bibliotheken beim Beenden von Jellyfin.</translation>
+        <source>Forget applied library filters when PresserFin is closed.</source>
+        <translation>Verwerfen von angewendeten Filter auf Bibliotheken beim Beenden von PresserFin.</translation>
     </message>
     <message>
         <source>Mark As Played</source>
@@ -1691,32 +1691,32 @@
         <translation>Werbe-Abschnitte</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for commercial segments?</source>
-        <translation>Welche Maßnahmen sollte Jellyfin für kommerzielle Segmente ergreifen?</translation>
+        <source>What action should PresserFin take for commercial segments?</source>
+        <translation>Welche Maßnahmen sollte PresserFin für kommerzielle Segmente ergreifen?</translation>
     </message>
     <message>
         <source>Intro Segments</source>
         <translation>Intro-Segmente</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for intro segments?</source>
-        <translation>Welche Maßnahmen sollte Jellyfin für Intro-Segmente ergreifen?</translation>
+        <source>What action should PresserFin take for intro segments?</source>
+        <translation>Welche Maßnahmen sollte PresserFin für Intro-Segmente ergreifen?</translation>
     </message>
     <message>
         <source>Outro Segments</source>
         <translation>Outro-Segmente</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for outro segments?</source>
-        <translation>Welche Maßnahmen sollte Jellyfin für die Outro-Segmente ergreifen?</translation>
+        <source>What action should PresserFin take for outro segments?</source>
+        <translation>Welche Maßnahmen sollte PresserFin für die Outro-Segmente ergreifen?</translation>
     </message>
     <message>
         <source>Preview Segments</source>
         <translation>Vorschau-Segmente</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for preview segments?</source>
-        <translation>Welche Maßnahmen sollte Jellyfin für die Vorschau-Segmente ergreifen?</translation>
+        <source>What action should PresserFin take for preview segments?</source>
+        <translation>Welche Maßnahmen sollte PresserFin für die Vorschau-Segmente ergreifen?</translation>
     </message>
     <message>
         <source>Saved Profile</source>
@@ -1763,8 +1763,8 @@
         <translation>Zusammenfassungssegmente</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for recap segments?</source>
-        <translation>Welche Maßnahmen sollte Jellyfin in Bezug auf die Zusammenfassungssegmente ergreifen?</translation>
+        <source>What action should PresserFin take for recap segments?</source>
+        <translation>Welche Maßnahmen sollte PresserFin in Bezug auf die Zusammenfassungssegmente ergreifen?</translation>
     </message>
     <message>
         <source>Item Detail Screen</source>
@@ -1883,36 +1883,36 @@
         <translation>Abschnitt 8</translation>
     </message>
     <message>
-        <source>Select what to show in section 1. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 1. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 1. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 1. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
-        <source>Select what to show in section 2. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 2. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 2. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 2. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
-        <source>Select what to show in section 3. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 3. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 3. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 3. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
-        <source>Select what to show in section 4. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 4. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 4. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 4. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
-        <source>Select what to show in section 5. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 5. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 5. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 5. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
-        <source>Select what to show in section 6. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 6. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 6. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 6. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
-        <source>Select what to show in section 7. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 7. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 7. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 7. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
-        <source>Select what to show in section 8. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Auswahl für Abschnitt 8. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss Jellyfin geschlossen und neu geöffnet werden.</translation>
+        <source>Select what to show in section 8. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Auswahl für Abschnitt 8. Diese Einstellung hat keinen Effekt wenn &quot;Verwende die Anordnung der Home-Sektion des Webclients&quot; aktiv ist. Um die Änderungen zu übernehmen muss PresserFin geschlossen und neu geöffnet werden.</translation>
     </message>
     <message>
         <source>Live TV</source>
@@ -2419,8 +2419,8 @@
         <translation>Immer versuchen, Videodateien direkt abzuspielen</translation>
     </message>
     <message>
-        <source>Forces Jellyfin to try direct playing video media, Live TV excluded. Enabling this ignores all other playback support settings and will always first attempt direct playback. It also changes how transcode reason is displayed.</source>
-        <translation>Erzwingt Jellyfin Videodateien direkt abzuspielen, inklusive Live-TV. Das Aktivieren ignoriert alle anderen Wiedergabe-Unterstützungseinstellungen und sorgt dafür, dass die direkte Wiedergabe immer zuerst versucht wird. Außerdem ändert es, wie Transkodierungsgründe angezeigt werden.</translation>
+        <source>Forces PresserFin to try direct playing video media, Live TV excluded. Enabling this ignores all other playback support settings and will always first attempt direct playback. It also changes how transcode reason is displayed.</source>
+        <translation>Erzwingt PresserFin Videodateien direkt abzuspielen, inklusive Live-TV. Das Aktivieren ignoriert alle anderen Wiedergabe-Unterstützungseinstellungen und sorgt dafür, dass die direkte Wiedergabe immer zuerst versucht wird. Außerdem ändert es, wie Transkodierungsgründe angezeigt werden.</translation>
     </message>
     <message>
         <source>Channel Logo</source>
@@ -3478,8 +3478,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -3780,8 +3780,8 @@
         <extracomment>Dialog detail when error occurs during playback</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -4002,8 +4002,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -4241,8 +4241,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -4522,8 +4522,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk aus</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk aus</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -4791,8 +4791,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk aus</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk aus</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -5026,8 +5026,8 @@
         <extracomment>Dialog Title: Received error from server when trying to get information about the selected item for playback</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Jellyfin server aus dem lokalen Netzwerk auswählen</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>PresserFin server aus dem lokalen Netzwerk auswählen</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -5318,8 +5318,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -5632,8 +5632,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -5998,8 +5998,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -6443,8 +6443,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -6742,8 +6742,8 @@
         <translation>Server wechseln</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Verwenden Sie das generierte Splashscreen-Bild als Jellyfin-Hintergrund. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Verwenden Sie das generierte Splashscreen-Bild als PresserFin-Hintergrund. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -6752,8 +6752,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -6761,12 +6761,12 @@
         <translation>Designelemente</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s screensaver background.</source>
-        <translation>Verwenden Sie das generierte Splashscreen-Bild als Hintergrund für Jellyfin&apos;s Bildschirmschoner.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s screensaver background.</source>
+        <translation>Verwenden Sie das generierte Splashscreen-Bild als Hintergrund für PresserFin&apos;s Bildschirmschoner.</translation>
     </message>
     <message>
-        <source>Options for Jellyfin&apos;s screensaver.</source>
-        <translation>Optionen für Jellyfin&apos;s Bildschirmschoner.</translation>
+        <source>Options for PresserFin&apos;s screensaver.</source>
+        <translation>Optionen für PresserFin&apos;s Bildschirmschoner.</translation>
         <extracomment>Description for Screensaver user settings.</extracomment>
     </message>
     <message>
@@ -6910,8 +6910,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -7415,8 +7415,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -7616,8 +7616,8 @@
         <translation>Anmeldedaten speichern?</translation>
     </message>
     <message>
-        <source>Hides all clocks in Jellyfin. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Blendet alle Uhren in Jellyfin aus. Jellyfin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Hides all clocks in PresserFin. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Blendet alle Uhren in PresserFin aus. PresserFin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -7636,8 +7636,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Verwenden Sie das generierte Startbildschirm-Bild als Jellyfin-Hintergrund. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Verwenden Sie das generierte Startbildschirm-Bild als PresserFin-Hintergrund. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -7646,8 +7646,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -7655,8 +7655,8 @@
         <translation>Designelemente</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s screensaver background.</source>
-        <translation>Verwenden Sie das generierte Splashscreen-Bild als Hintergrund für Jellyfin&apos;s Bildschirmschoner.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s screensaver background.</source>
+        <translation>Verwenden Sie das generierte Splashscreen-Bild als Hintergrund für PresserFin&apos;s Bildschirmschoner.</translation>
     </message>
     <message>
         <source>Use Splashscreen as Screensaver Background</source>
@@ -7664,8 +7664,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options for Jellyfin&apos;s screensaver.</source>
-        <translation>Optionen für Jellyfin&apos;s Bildschirmschoner.</translation>
+        <source>Options for PresserFin&apos;s screensaver.</source>
+        <translation>Optionen für PresserFin&apos;s Bildschirmschoner.</translation>
         <extracomment>Description for Screensaver user settings.</extracomment>
     </message>
     <message>
@@ -7839,8 +7839,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen Jellyfin-Server aus dem lokalen Netzwerk aus</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen PresserFin-Server aus dem lokalen Netzwerk aus</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -8648,8 +8648,8 @@
         <translation>Server wechseln</translation>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -8677,8 +8677,8 @@
         <extracomment>Dialog title when unable to load Content from Server</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Nutze Jellyfin&apos;s Generierten Splashscreen als Bildschirmschoner Hintergrund. Jellyfin muss geschlossen und wieder geöffnet werden damit die Änderung in Kraft treten.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Nutze PresserFin&apos;s Generierten Splashscreen als Bildschirmschoner Hintergrund. PresserFin muss geschlossen und wieder geöffnet werden damit die Änderung in Kraft treten.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -8726,8 +8726,8 @@
         <translation>Überspringe Intro</translation>
     </message>
     <message>
-        <source>Hides all clocks in Jellyfin. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Blendet alle Uhren in Jellyfin aus. Jellyfin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Hides all clocks in PresserFin. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Blendet alle Uhren in PresserFin aus. PresserFin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -8751,8 +8751,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -8760,8 +8760,8 @@
         <translation>Designelemente</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s screensaver background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Nutze Jellyfin&apos;s Generierten Splashscreen als Bildschirmschoner Hintergrund. Jellyfin muss geschlossen und wieder geöffnet werden damit die Änderung in Kraft treten.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s screensaver background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Nutze PresserFin&apos;s Generierten Splashscreen als Bildschirmschoner Hintergrund. PresserFin muss geschlossen und wieder geöffnet werden damit die Änderung in Kraft treten.</translation>
     </message>
     <message>
         <source>Use Splashscreen as Screensaver Background</source>
@@ -8769,8 +8769,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options for Jellyfin&apos;s screensaver.</source>
-        <translation>Optionen für Jellyfin&apos;s Bildschirmschoner.</translation>
+        <source>Options for PresserFin&apos;s screensaver.</source>
+        <translation>Optionen für PresserFin&apos;s Bildschirmschoner.</translation>
         <extracomment>Description for Screensaver user settings.</extracomment>
     </message>
     <message>
@@ -9249,12 +9249,12 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s screensaver background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Nutze generiertes Splashscreen-Bild als Hintergrund für den Bildschirmschoner von Jellyfin. Jellyfin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s screensaver background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Nutze generiertes Splashscreen-Bild als Hintergrund für den Bildschirmschoner von PresserFin. PresserFin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Nutze generiertes Splashscreen-Bild als Hintergrund für die Startseite von Jellyfin. Jellyfin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Nutze generiertes Splashscreen-Bild als Hintergrund für die Startseite von PresserFin. PresserFin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -9348,8 +9348,8 @@
         <translation>Trailer abspielen</translation>
     </message>
     <message>
-        <source>Hides all clocks in Jellyfin. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Blendet alle Uhren in Jellyfin aus. Jellyfin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Hides all clocks in PresserFin. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Blendet alle Uhren in PresserFin aus. PresserFin muss geschlossen und wieder geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -9368,8 +9368,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -9382,8 +9382,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options for Jellyfin&apos;s screensaver.</source>
-        <translation>Optionen für Jellyfins Bildschirmschoner.</translation>
+        <source>Options for PresserFin&apos;s screensaver.</source>
+        <translation>Optionen für PresserFins Bildschirmschoner.</translation>
         <extracomment>Description for Screensaver user settings.</extracomment>
     </message>
     <message>
@@ -9582,8 +9582,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen Jellyfin-Server aus dem lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen PresserFin-Server aus dem lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -9881,8 +9881,8 @@
         <translation>Server wechseln</translation>
     </message>
     <message>
-        <source>Options for Jellyfin&apos;s screensaver.</source>
-        <translation>Einstellungen für Jellyfin&apos;s Bildschirmschoner.</translation>
+        <source>Options for PresserFin&apos;s screensaver.</source>
+        <translation>Einstellungen für PresserFin&apos;s Bildschirmschoner.</translation>
         <extracomment>Description for Screensaver user settings.</extracomment>
     </message>
     <message>
@@ -9905,8 +9905,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen bereits verfügbaren Jellyfin Server aus Ihrem Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen bereits verfügbaren PresserFin Server aus Ihrem Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -10028,8 +10028,8 @@
         <translation>Trailer abspielen</translation>
     </message>
     <message>
-        <source>Hides all clocks in Jellyfin. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Blendet alle Uhren in Jellyfin aus. Jellyfin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Hides all clocks in PresserFin. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Blendet alle Uhren in PresserFin aus. PresserFin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -10048,8 +10048,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Generierten Splashscreen als Jellyfin&apos;s Hintergrund verwenden. Jellyfin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Generierten Splashscreen als PresserFin&apos;s Hintergrund verwenden. PresserFin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -10058,8 +10058,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Einstellungen für das Aussehen Jellyfin&apos;s.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Einstellungen für das Aussehen PresserFin&apos;s.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -10067,8 +10067,8 @@
         <translation>Designelemente</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s screensaver background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Generierten Splashscreen als Jellyfin&apos;s Bildschirmschoner verwenden. Jellyfin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s screensaver background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Generierten Splashscreen als PresserFin&apos;s Bildschirmschoner verwenden. PresserFin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
     </message>
     <message>
         <source>Use Splashscreen as Screensaver Background</source>
@@ -10977,8 +10977,8 @@
         <extracomment>Title of KeyboardDialog when manually entering a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen verfügbaren Jellyfin Server aus ihrem Lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen verfügbaren PresserFin Server aus ihrem Lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -11279,8 +11279,8 @@
         <extracomment>Title of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen verfügbaren Jellyfin Server aus ihrem Lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen verfügbaren PresserFin Server aus ihrem Lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -11732,8 +11732,8 @@
         <translation>Bildschirmschoner</translation>
     </message>
     <message>
-        <source>Options for Jellyfin&apos;s screensaver.</source>
-        <translation>Einstellungen für Jellyfins Bildschirmschoner.</translation>
+        <source>Options for PresserFin&apos;s screensaver.</source>
+        <translation>Einstellungen für PresserFins Bildschirmschoner.</translation>
         <extracomment>Description for Screensaver user settings.</extracomment>
     </message>
     <message>
@@ -11811,8 +11811,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s screensaver background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Generierten Splashscreen als Jellyfin&apos;s Bildschirmschoner verwenden. Jellyfin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s screensaver background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Generierten Splashscreen als PresserFin&apos;s Bildschirmschoner verwenden. PresserFin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
     </message>
     <message>
         <source>Use Splashscreen as Home Background</source>
@@ -11820,8 +11820,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Generierten Startbildschirm als Jellyfins Hintergrund verwenden. Jellyfin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Generierten Startbildschirm als PresserFins Hintergrund verwenden. PresserFin muss neu geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -11839,8 +11839,8 @@
         <extracomment>Name of a setting - should we hide subtitles that might transcode</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Zeige Was ist neu Popup nach einem Jellyfin update.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Zeige Was ist neu Popup nach einem PresserFin update.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -11857,8 +11857,8 @@
         <translation>Wenn ausgewählt, wird das Sterne und Benutzerbewertungssystem entfernt. Dies ist um spoilern vorzubeugen.</translation>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Einstellungen für das Aussehen Jellyfins.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Einstellungen für das Aussehen PresserFins.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -11877,8 +11877,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Hides all clocks in Jellyfin. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Blendet alle Uhren in Jellyfin aus. Jellyfin muss neu gestartet werden, damit die Änderung wirksam wird.</translation>
+        <source>Hides all clocks in PresserFin. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Blendet alle Uhren in PresserFin aus. PresserFin muss neu gestartet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -12532,8 +12532,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Benutzen Sie den generierten Startbildschirm als Jellyfin&apos;s Start-Hintergrund. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Benutzen Sie den generierten Startbildschirm als PresserFin&apos;s Start-Hintergrund. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -12761,8 +12761,8 @@
         <extracomment>Title of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen verfügbaren Jellyfin-Server in Ihrem lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen verfügbaren PresserFin-Server in Ihrem lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -12866,8 +12866,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Einstellungen die das Aussehen von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Einstellungen die das Aussehen von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -12955,8 +12955,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Alle Uhren in Jellyfin ausblenden. Jellyfin muss geschlossen und wieder geöffnet werden, damit die Änderungen wirksam werden.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Alle Uhren in PresserFin ausblenden. PresserFin muss geschlossen und wieder geöffnet werden, damit die Änderungen wirksam werden.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -13056,8 +13056,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Popup-Fenster mit Neuigkeiten anzeigen wenn Jellyfin auf eine neue Version aktualisiert wurde.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Popup-Fenster mit Neuigkeiten anzeigen wenn PresserFin auf eine neue Version aktualisiert wurde.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -13671,8 +13671,8 @@
         <extracomment>Content of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wählen Sie einen verfügbaren Jellyfin-Server in Ihrem lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wählen Sie einen verfügbaren PresserFin-Server in Ihrem lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -14183,8 +14183,8 @@
         <extracomment>Content of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Einen Jellyfin-Server im lokalen Netzwerk auswählen:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Einen PresserFin-Server im lokalen Netzwerk auswählen:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -14269,8 +14269,8 @@
         <translation>Sendungen</translation>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen die das Aussehen von Jellyfin ändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen die das Aussehen von PresserFin ändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -14336,8 +14336,8 @@
         <translation>Bilder von ungesehenen Episoden ausblenden.</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Generiertes Splashscreen-Bild als Jellyfins Starthintergrund verwenden. Jellyfin muss geschlossen und neu geöffnet werden, damit die Änderungen übernommen werden.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Generiertes Splashscreen-Bild als PresserFins Starthintergrund verwenden. PresserFin muss geschlossen und neu geöffnet werden, damit die Änderungen übernommen werden.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -14346,8 +14346,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Sämtliche Uhren in Jellyfin ausblenden. Jellyfin muss geschlossen und neu geöffnet werden, damit die Änderungen übernommen werden.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Sämtliche Uhren in PresserFin ausblenden. PresserFin muss geschlossen und neu geöffnet werden, damit die Änderungen übernommen werden.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -14814,8 +14814,8 @@
         <translation>Zufall aus</translation>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Zeige &quot;Als nächstes&quot; Popup nachdem Jellyfin auf eine neue Version aktualisiert wurde.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Zeige &quot;Als nächstes&quot; Popup nachdem PresserFin auf eine neue Version aktualisiert wurde.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -14848,8 +14848,8 @@
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
-        <source>Remember the currently logged in user and try to log them in again next time you start the Jellyfin app.</source>
-        <translation>Anmeldung des aktuellen Nutzers erhalten und beim nächsten Start der Jellyfin-App automatisch anmelden.</translation>
+        <source>Remember the currently logged in user and try to log them in again next time you start the PresserFin app.</source>
+        <translation>Anmeldung des aktuellen Nutzers erhalten und beim nächsten Start der PresserFin-App automatisch anmelden.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -15075,8 +15075,8 @@
         <translation>Kanaldaten können nicht vom Server geladen werden</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Benutz das generierte Splashscreen-Bild als Jellyfin&apos;s Home-Hintergrundbild. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Benutz das generierte Splashscreen-Bild als PresserFin&apos;s Home-Hintergrundbild. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -15094,8 +15094,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Alle Uhren in Jellyfin ausblenden. Jellyfin muss geschlossen und wieder geöffnet werden, damit die Änderungen wirksam werden.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Alle Uhren in PresserFin ausblenden. PresserFin muss geschlossen und wieder geöffnet werden, damit die Änderungen wirksam werden.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -15677,8 +15677,8 @@
         <translation>Serie aufnehmen</translation>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Einen Jellyfin-Server im lokalen Netzwerk auswählen:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Einen PresserFin-Server im lokalen Netzwerk auswählen:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -15824,8 +15824,8 @@
         <translation>Sendungen</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Verwende das generierte Splashscreen-Bild als Hintergrund für die Startseite von Jellyfin. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Verwende das generierte Splashscreen-Bild als Hintergrund für die Startseite von PresserFin. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -16100,8 +16100,8 @@
         <extracomment>Help text in search results</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -16110,8 +16110,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Alle Uhren in Jellyfin ausblenden. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Alle Uhren in PresserFin ausblenden. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -16148,8 +16148,8 @@
         <extracomment>Description of a setting - should we hide subtitles that might transcode</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Zeige Popup für Neue Funktionen, wenn Jellyfin auf eine neue Version aktualisiert wird.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Zeige Popup für Neue Funktionen, wenn PresserFin auf eine neue Version aktualisiert wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -16325,13 +16325,13 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Remember the currently logged in user and try to log them in again next time you start the Jellyfin app.</source>
-        <translation>Merke dir den aktuell angemeldeten Benutzer und versuche, ihn beim nächsten Start der Jellyfin-App erneut anzumelden.</translation>
+        <source>Remember the currently logged in user and try to log them in again next time you start the PresserFin app.</source>
+        <translation>Merke dir den aktuell angemeldeten Benutzer und versuche, ihn beim nächsten Start der PresserFin-App erneut anzumelden.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Verwende das generierte Splashscreen-Bild als Hintergrund für Jellyfin&apos;s Startseite. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Verwende das generierte Splashscreen-Bild als Hintergrund für PresserFin&apos;s Startseite. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -16550,8 +16550,8 @@
         <extracomment>Message to display to user while client is attempting to connect to the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen verfügbaren Jellyfin Server aus deinem localen Netzwerk</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen verfügbaren PresserFin Server aus deinem localen Netzwerk</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -16969,8 +16969,8 @@
         <extracomment>Help text in search results</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -17087,8 +17087,8 @@
         <translation>Designelemente</translation>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Verwenden Sie das generierte Startbildschirm-Bild als Hintergrund für die Jellyfin-Startseite. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Verwenden Sie das generierte Startbildschirm-Bild als Hintergrund für die PresserFin-Startseite. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -17133,8 +17133,8 @@
         <translation>Geboren am</translation>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Alle Uhren in Jellyfin ausblenden. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Alle Uhren in PresserFin ausblenden. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -17559,8 +17559,8 @@
         <extracomment>Title of KeyboardDialog when manually entering a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Wähle einen verfügbaren Jellyfin-Server aus Ihrem lokalen Netzwerk aus:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Wähle einen verfügbaren PresserFin-Server aus Ihrem lokalen Netzwerk aus:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -17773,8 +17773,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Verwenden Sie das generierte Startbildschirm-Bild als Hintergrund für die Jellyfin-Startseite. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Verwenden Sie das generierte Startbildschirm-Bild als Hintergrund für die PresserFin-Startseite. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderung wirksam wird.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -17783,8 +17783,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Alle Uhren in Jellyfin ausblenden. Jellyfin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Alle Uhren in PresserFin ausblenden. PresserFin muss geschlossen und erneut geöffnet werden, damit die Änderungen wirksam werden.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -17901,8 +17901,8 @@
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
-        <source>Remember the currently logged in user and try to log them in again next time you start the Jellyfin app.</source>
-        <translation>Den aktuell angemeldeten Nutzer merken und beim nächsten Start der Jellyfin App versuchen, diesen erneut einzuloggen.</translation>
+        <source>Remember the currently logged in user and try to log them in again next time you start the PresserFin app.</source>
+        <translation>Den aktuell angemeldeten Nutzer merken und beim nächsten Start der PresserFin App versuchen, diesen erneut einzuloggen.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -17916,8 +17916,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Die Anordnung und Abschnitte der Roku-Startansicht an den Startbildschirm des Webclients anpassen. Die Jellyfin-App muss neu gestartet werden damit diese Änderung wirksam wird.</translation>
+        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Die Anordnung und Abschnitte der Roku-Startansicht an den Startbildschirm des Webclients anpassen. Die PresserFin-App muss neu gestartet werden damit diese Änderung wirksam wird.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -18273,8 +18273,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Optionen, die das Design von Jellyfin verändern.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Optionen, die das Design von PresserFin verändern.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -18292,8 +18292,8 @@
         <extracomment>Dialog title in Main.brs</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Popup mit Neuigkeiten anzeigen, wenn Jellyfin auf eine neue Version aktualisiert wird.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Popup mit Neuigkeiten anzeigen, wenn PresserFin auf eine neue Version aktualisiert wird.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="AudioPlayerView" extends="JFScreen">
+<component name="AudioPlayerView" extends="PFScreen">
   <children>
     <Rectangle id="background" width="1920" height="1080" color="#000000" visible="false" />
     <Poster id="backdrop" opacity=".3" loadDisplayMode="scaleToZoom" width="1920" height="1200" />

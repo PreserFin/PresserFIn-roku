@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="TVSeriesDetails" extends="JFScreen">
+<component name="TVSeriesDetails" extends="PFScreen">
   <children>
     <LayoutGroup id="toplevel" layoutDirection="vert" translation="[100, 100]" itemSpacings="[25]">
       <LayoutGroup layoutDirection="horiz" itemSpacings="[15]">

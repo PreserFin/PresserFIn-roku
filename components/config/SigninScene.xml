@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="SigninScene" extends="JFScreen">
+<component name="SigninScene" extends="PFScreen">
   <children>
     <Text
       text="Sign In"

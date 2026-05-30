@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="UserSelect" extends="JFScreen">
+<component name="UserSelect" extends="PFScreen">
   <children>
     <Rectangle id="unhideUsers" translation="[-600, 0]" width="600" height="1080">
       <Text

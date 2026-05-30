@@ -102,7 +102,7 @@ function ServerInfo()
     end if
 
     ' otherwise return error message
-    return { "Error": true, "ErrorMessage": "Does not appear to be a Jellyfin Server" }
+    return { "Error": true, "ErrorMessage": "Does not appear to be a PresserFin Server" }
 
 end function
 

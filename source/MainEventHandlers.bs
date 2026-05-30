@@ -164,7 +164,7 @@ sub onCloseSidePanelEvent()
     if isValid(group.lastFocus)
         group.lastFocus.setFocus(true)
 
-        if group.lastFocus.isSubType("JFOverhang")
+        if group.lastFocus.isSubType("PFOverhang")
             group.lastFocus.callFunc("highlightUser")
         end if
 
@@ -235,7 +235,7 @@ sub onJumpToEvent(msg)
         set_user_setting("display.jumpToFilter.filter", "Genres")
         set_user_setting("display.jumpToFilter.filterOptions", `{"Genres": "${jumpToData.LookupCI("Name")}"}`)
 
-        libraryContent = CreateObject("roSGNode", "JFContentItem")
+        libraryContent = CreateObject("roSGNode", "PFContentItem")
         libraryContent.type = "Music"
         libraryContent.json = {
             type: "collectionfolder",
@@ -252,7 +252,7 @@ sub onJumpToEvent(msg)
         set_user_setting("display.jumpToFilter.filter", "Years")
         set_user_setting("display.jumpToFilter.filterOptions", `{"Years": "${jumpToData.LookupCI("Name")}"}`)
 
-        libraryContent = CreateObject("roSGNode", "JFContentItem")
+        libraryContent = CreateObject("roSGNode", "PFContentItem")
         libraryContent.type = "Music"
         libraryContent.json = {
             type: "collectionfolder",
@@ -1373,7 +1373,7 @@ sub onStateEvent(msg)
         if isStringEqual(node.selectedItemType, ItemType.TVCHANNEL)
             thisItem = {
                 id: node.id,
-                type: ItemType.RECORDING
+                type: ItemType.TVCHANNEL
             }
 
             MainAction.playItem(thisItem, { resetShuffle: true })
@@ -1396,7 +1396,7 @@ sub onRoDeviceInfoEvent(msg)
         group = m.global.sceneManager.callFunc("getActiveScene")
         if isValid(group)
             ' refresh the current view
-            if group.isSubType("JFScreen")
+            if group.isSubType("PFScreen")
                 group.callFunc("OnScreenShown")
             end if
         end if
@@ -1414,6 +1414,10 @@ sub onRoDeviceInfoEvent(msg)
 
     if isValid(event.generalMemoryLevel)
         print "event.generalMemoryLevel = ", event.generalMemoryLevel
+
+        tmpSession = m.global.session
+        tmpSession.AddReplace("memoryLevel", normalizeMemoryLevel(event.generalMemoryLevel))
+        m.global.setFields({ session: tmpSession })
         return
     end if
 
@@ -1437,6 +1441,29 @@ sub onRoDeviceInfoEvent(msg)
         return
     end if
 end sub
+
+function normalizeMemoryLevel(memoryLevel as dynamic) as string
+    if not isValid(memoryLevel) then return "normal"
+
+    memoryString = LCase(toString(memoryLevel))
+    if isStringEqual(memoryString, "critical")
+        return "critical"
+    end if
+    if isStringEqual(memoryString, "low")
+        return "low"
+    end if
+
+    ' Handle possible numeric-like memory levels defensively.
+    memoryInteger = memoryString.ToInt()
+    if memoryString = "2" or (isValid(memoryInteger) and memoryInteger >= 2)
+        return "critical"
+    end if
+    if memoryString = "1" or (isValid(memoryInteger) and memoryInteger = 1)
+        return "low"
+    end if
+
+    return "normal"
+end function
 
 sub onReturnDataEvent(msg)
     ' User has chosen an option in a radio dialog
@@ -1818,7 +1845,7 @@ sub processLibraryItemPopup(selectedPopupButton as string, itemID as string, par
         set_user_setting("display.jumpToFilter.filter", "Genres")
         set_user_setting("display.jumpToFilter.filterOptions", `{"Genres": "${params.LookupCI("GenreName")}"}`)
 
-        libraryContent = CreateObject("roSGNode", "JFContentItem")
+        libraryContent = CreateObject("roSGNode", "PFContentItem")
         libraryContent.id = params.LookupCI("LibraryId")
         libraryContent.parentFolder = params.LookupCI("LibraryId")
         libraryContent.type = "Music"

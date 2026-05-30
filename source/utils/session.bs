@@ -3,14 +3,17 @@ import "pkg:/source/api/baserequest.bs"
 import "pkg:/source/api/userauth.bs"
 import "pkg:/source/enums/LiveTVScreen.bs"
 import "pkg:/source/enums/String.bs"
+import "pkg:/source/utils/rokuModelMemory.bs"
 import "pkg:/source/utils/misc.bs"
 
 namespace session
     ' Initialize the global session array
     sub Init()
+        defaultMemoryLevel = getRokuModelMemoryLevel(chainLookupReturn(m.global, "device.model", ""))
+
         m.global.addFields({
             session: {
-                "memoryLevel": "normal",
+                "memoryLevel": defaultMemoryLevel,
                 server: {},
                 user: {
                     Configuration: {},
@@ -62,8 +65,8 @@ namespace session
             session.Update("server", tmpSessionServer)
         end sub
 
-        ' Add or update the jellyfin server URL from the global server session array (m.global.session.server)
-        ' Returns a boolean based on if a connection to the Jellyfin server was made
+        ' Add or update the presserfin server URL from the global server session array (m.global.session.server)
+        ' Returns a boolean based on if a connection to the PresserFin server was made
         function UpdateURL(value as string) as boolean
             ' validate parameters
             if value = "" then return false
@@ -78,7 +81,7 @@ namespace session
         end function
 
         ' Use the saved server url to populate the global server session array (m.global.session.server)
-        ' Returns a boolean based on if a connection to the Jellyfin server was made
+        ' Returns a boolean based on if a connection to the PresserFin server was made
         function Populate() as boolean
             ' validate server url
             if m.global.session.server.url = invalid or m.global.session.server.url = "" then return false
@@ -446,7 +449,7 @@ namespace session
             ' Grab global vars from registry and overwrite defaults
             sub LoadGlobals()
                 ' search main registry block for all keys that start with "global."
-                jfRegistry = RegistryReadAll("Jellyfin")
+                jfRegistry = RegistryReadAll("PresserFin")
                 for each item in jfRegistry
                     if Left(item, 7) = "global."
                         session.user.settings.Save(item, get_setting(item))

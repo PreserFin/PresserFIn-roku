@@ -313,8 +313,8 @@ sub clearOldLibraryFilters()
 end sub
 
 sub displayWhatsNewPopup(args)
-    ' Bypass What's New popup if server is Jellyfin demo
-    if isStringEqual(m.global.session.server.url, "https://demo.jellyfin.org/stable")
+    ' Bypass What's New popup if server is PresserFin demo
+    if isStringEqual(m.global.session.server.url, "https://demo.presserfin.org/stable")
         set_user_setting("LastRunVersion", m.global.app.version)
     end if
 

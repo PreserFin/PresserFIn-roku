@@ -171,7 +171,7 @@ sub onSelectSubtitlePressed()
             availableSubtitleTrackIndex = availSubtitleTrackIdx(item.track.TrackName)
             if availableSubtitleTrackIndex <> SubtitleSelection.NONE
 
-                ' Convert Jellyfin subtitle track name to Roku track name
+                ' Convert PresserFin subtitle track name to Roku track name
                 subtitleFullTrackName = m.view.availableSubtitleTracks[availableSubtitleTrackIndex].TrackName
 
                 if subtitleFullTrackName = m.view.subtitleTrack

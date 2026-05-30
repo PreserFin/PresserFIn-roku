@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="SubtitleSearchView" extends="JFScreen">
+<component name="SubtitleSearchView" extends="PFScreen">
   <children>
     <LayoutGroup id="mainGroup" layoutDirection="horiz" translation="[96, 175]" itemSpacings="[75]">
       <Poster id="moviePoster" translation="[250,150]" width="300" height="450" />

@@ -5,8 +5,8 @@
 <context>
     <name>default</name>
     <message>
-        <source>192.168.1.100:8096 or https://example.com/jellyfin</source>
-        <translation>192.168.1.100:8096 或 https://example.com/jellyfin</translation>
+        <source>192.168.1.100:8096</source>
+        <translation>192.168.1.100:8096</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -498,8 +498,8 @@
         <extracomment>Title of KeyboardDialog when manually entering a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>从您的本地网络中选择一个可用的Jellyfin服务器：</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>从您的本地网络中选择一个可用的PresserFin服务器：</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -729,8 +729,8 @@
         <translation>设计元素</translation>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>修改 Jellyfin 界面设计的选项。</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>修改 PresserFin 界面设计的选项。</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -739,8 +739,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>使用生成的启动画面作为 Jellyfin 的主页背景。需要关闭并重新打开 Jellyfin 以使更改生效。</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>使用生成的启动画面作为 PresserFin 的主页背景。需要关闭并重新打开 PresserFin 以使更改生效。</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -759,8 +759,8 @@
         <extracomment>Option Title in user setting screen</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>隐藏 Jellyfin 中的所有时钟。需要关闭并重新打开 Jellyfin 以使更改生效。</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>隐藏 PresserFin 中的所有时钟。需要关闭并重新打开 PresserFin 以使更改生效。</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -1008,8 +1008,8 @@
         <extracomment>Settings Menu - Title for option</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>在Jellyfin更新到新版本时显示“更新内容”弹窗。</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>在PresserFin更新到新版本时显示“更新内容”弹窗。</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -1337,8 +1337,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Remember the currently logged in user and try to log them in again next time you start the Jellyfin app.</source>
-        <translation>记住当前登录的用户，下次启动 Jellyfin 时尝试自动登录。</translation>
+        <source>Remember the currently logged in user and try to log them in again next time you start the PresserFin app.</source>
+        <translation>记住当前登录的用户，下次启动 PresserFin 时尝试自动登录。</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -1367,8 +1367,8 @@
         <extracomment>User Setting - Title for option</extracomment>
     </message>
     <message>
-        <source>Settings relating to how Jellyfin should handle media segments.</source>
-        <translation>与Jellyfin如何处理媒体片段相关的设置。</translation>
+        <source>Settings relating to how PresserFin should handle media segments.</source>
+        <translation>与PresserFin如何处理媒体片段相关的设置。</translation>
         <extracomment>User Setting - Description for option</extracomment>
     </message>
     <message>
@@ -1377,8 +1377,8 @@
         <extracomment>User Setting - Title for option</extracomment>
     </message>
     <message>
-        <source>What action should Jellyfin take for commercial segments?</source>
-        <translation>Jellyfin 应对广告片段执行什么操作？</translation>
+        <source>What action should PresserFin take for commercial segments?</source>
+        <translation>PresserFin 应对广告片段执行什么操作？</translation>
         <extracomment>User Setting - Description for option</extracomment>
     </message>
     <message>
@@ -1387,8 +1387,8 @@
         <extracomment>User Setting - Title for option</extracomment>
     </message>
     <message>
-        <source>What action should Jellyfin take for intro segments?</source>
-        <translation>Jellyfin 应对片头片段执行什么操作？</translation>
+        <source>What action should PresserFin take for intro segments?</source>
+        <translation>PresserFin 应对片头片段执行什么操作？</translation>
         <extracomment>User Setting - Description for option</extracomment>
     </message>
     <message>
@@ -1397,8 +1397,8 @@
         <extracomment>User Setting - Title for option</extracomment>
     </message>
     <message>
-        <source>What action should Jellyfin take for outro segments?</source>
-        <translation>Jellyfin 应对片尾片段执行什么操作？</translation>
+        <source>What action should PresserFin take for outro segments?</source>
+        <translation>PresserFin 应对片尾片段执行什么操作？</translation>
         <extracomment>User Setting - Description for option</extracomment>
     </message>
     <message>
@@ -1407,8 +1407,8 @@
         <extracomment>User Setting - Title for option</extracomment>
     </message>
     <message>
-        <source>What action should Jellyfin take for preview segments?</source>
-        <translation>Jellyfin 应对预览片段执行什么操作？</translation>
+        <source>What action should PresserFin take for preview segments?</source>
+        <translation>PresserFin 应对预览片段执行什么操作？</translation>
         <extracomment>User Setting - Description for option</extracomment>
     </message>
     <message>
@@ -1417,8 +1417,8 @@
         <extracomment>User Setting - Title for option</extracomment>
     </message>
     <message>
-        <source>What action should Jellyfin take for recap segments?</source>
-        <translation>Jellyfin 应对剧情回顾片段执行什么操作？</translation>
+        <source>What action should PresserFin take for recap segments?</source>
+        <translation>PresserFin 应对剧情回顾片段执行什么操作？</translation>
         <extracomment>User Setting - Description for option</extracomment>
     </message>
     <message>
@@ -1447,8 +1447,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>将 Roku 主界面栏目的排列方式与网页版客户端首页保持一致。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>将 Roku 主界面栏目的排列方式与网页版客户端首页保持一致。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -1517,8 +1517,8 @@
         <extracomment>Libraries Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Forget applied library filters when Jellyfin is closed.</source>
-        <translation>关闭 Jellyfin 时清除已应用的媒体库筛选条件。</translation>
+        <source>Forget applied library filters when PresserFin is closed.</source>
+        <translation>关闭 PresserFin 时清除已应用的媒体库筛选条件。</translation>
         <extracomment>Libraries Setting - Setting description</extracomment>
     </message>
     <message>
@@ -1592,16 +1592,16 @@
         <extracomment>User Setting - Setting option title</extracomment>
     </message>
     <message>
-        <source>The selected Jellyfin server uses version</source>
-        <translation>所选的 Jellyfin 服务器使用版本</translation>
+        <source>The selected PresserFin server uses version</source>
+        <translation>所选的 PresserFin 服务器使用版本</translation>
     </message>
     <message>
         <source>which is not supported by this app. Please update the server to</source>
         <translation>不被此应用支持。请将服务器更新至</translation>
     </message>
     <message>
-        <source>or newer to use this app or install and use the Jellyfin Legacy app from Roku&apos;s Streaming Store</source>
-        <translation>或更高版本，以使用此应用；或者从 Roku 流媒体商店安装并使用 Jellyfin Legacy 应用</translation>
+        <source>or newer to use this app or install and use the PresserFin Legacy app from Roku&apos;s Streaming Store</source>
+        <translation>或更高版本，以使用此应用；或者从 Roku 流媒体商店安装并使用 PresserFin Legacy 应用</translation>
     </message>
     <message>
         <source>Return to server select screen</source>
@@ -1859,36 +1859,36 @@
         <translation>第 8 部分</translation>
     </message>
     <message>
-        <source>Select what to show in section 1. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第1部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 1. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第1部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
-        <source>Select what to show in section 2. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第2部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 2. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第2部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
-        <source>Select what to show in section 3. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第3部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 3. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第3部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
-        <source>Select what to show in section 4. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第4部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 4. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第4部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
-        <source>Select what to show in section 5. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第5部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 5. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第5部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
-        <source>Select what to show in section 6. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第6部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 6. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第6部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
-        <source>Select what to show in section 7. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第7部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 7. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第7部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
-        <source>Select what to show in section 8. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>选择在第8部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 Jellyfin 才能生效。</translation>
+        <source>Select what to show in section 8. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>选择在第8部分显示的内容。如果启用了“使用网页版客户端的首页栏目排列”，此设置将无效。更改后需要关闭并重新打开 PresserFin 才能生效。</translation>
     </message>
     <message>
         <source>Live TV</source>

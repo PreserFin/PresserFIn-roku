@@ -1,0 +1,112 @@
+' Roku model-to-RAM mapping used for startup memory-tier defaults.
+' Source: Roku Developer Hardware Specifications (developer.roku.com/dev/docs/hardware).
+' Updated for models listed in that spec as of 2026-05-30.
+
+function getRokuModelRamMB(model as dynamic) as integer
+    modelKey = normalizeRokuModelKey(model)
+    if modelKey = "" then return -1
+
+    modelRamMap = {}
+    ' Current models
+    modelRamMap.AddReplace("3840X", 512)
+    modelRamMap.AddReplace("3830X", 1024)
+    modelRamMap.AddReplace("3820X2", 1024)
+    modelRamMap.AddReplace("3821X2", 1024)
+    modelRamMap.AddReplace("4850X", 2048)
+    modelRamMap.AddReplace("9104X", 1024)
+    modelRamMap.AddReplace("J000X", 2048)
+    modelRamMap.AddReplace("7000X", 1024)
+    modelRamMap.AddReplace("8000X", 512)
+    modelRamMap.AddReplace("H000X", 512)
+    modelRamMap.AddReplace("A000X", 1536)
+    modelRamMap.AddReplace("C000X", 1024)
+    modelRamMap.AddReplace("G000X", 1024)
+    modelRamMap.AddReplace("K000X", 512)
+    modelRamMap.AddReplace("L000X", 1024)
+    modelRamMap.AddReplace("M000X", 2048)
+    modelRamMap.AddReplace("P000X", 1024)
+    modelRamMap.AddReplace("T100X", 512)
+    modelRamMap.AddReplace("K8PXX", 512)
+
+    ' Updatable models
+    modelRamMap.AddReplace("9100X", 1024)
+    modelRamMap.AddReplace("9102X", 1024)
+    modelRamMap.AddReplace("4800X", 2048)
+    modelRamMap.AddReplace("3960X", 512)
+    modelRamMap.AddReplace("3931X", 512)
+    modelRamMap.AddReplace("3940X2", 1024)
+    modelRamMap.AddReplace("3941X2", 1024)
+    modelRamMap.AddReplace("3942X2", 1024)
+    modelRamMap.AddReplace("3600X", 512)
+    modelRamMap.AddReplace("3700X", 512)
+    modelRamMap.AddReplace("3710X", 512)
+    modelRamMap.AddReplace("3800X", 512)
+    modelRamMap.AddReplace("3810X", 1024)
+    modelRamMap.AddReplace("3811X", 1024)
+    modelRamMap.AddReplace("3820X", 1024)
+    modelRamMap.AddReplace("3821X", 1024)
+    modelRamMap.AddReplace("3900X", 512)
+    modelRamMap.AddReplace("3910X", 512)
+    modelRamMap.AddReplace("3930X", 512)
+    modelRamMap.AddReplace("3930EU", 512)
+    modelRamMap.AddReplace("3940X", 1024)
+    modelRamMap.AddReplace("3941X", 1024)
+    modelRamMap.AddReplace("3920X", 1024)
+    modelRamMap.AddReplace("3921X", 1024)
+    modelRamMap.AddReplace("4620X", 1024)
+    modelRamMap.AddReplace("4630X", 1024)
+    modelRamMap.AddReplace("4640X", 1024)
+    modelRamMap.AddReplace("4660X", 1024)
+    modelRamMap.AddReplace("4662X", 1024)
+    modelRamMap.AddReplace("4670X", 2048)
+    modelRamMap.AddReplace("4200X", 512)
+    modelRamMap.AddReplace("4210X", 512)
+    modelRamMap.AddReplace("4230X", 512)
+    modelRamMap.AddReplace("5000X", 512)
+    modelRamMap.AddReplace("6000X", 1536)
+    modelRamMap.AddReplace("C000GB", 1024)
+    modelRamMap.AddReplace("D000X", 512)
+
+    ' Legacy still useful for side-load testing
+    modelRamMap.AddReplace("4400X", 1536)
+    modelRamMap.AddReplace("E000X", 1536)
+    modelRamMap.AddReplace("3400X", 256)
+    modelRamMap.AddReplace("3420X", 256)
+    modelRamMap.AddReplace("3500X", 512)
+    modelRamMap.AddReplace("2700X", 512)
+    modelRamMap.AddReplace("2710X", 512)
+    modelRamMap.AddReplace("2720X", 512)
+
+    if modelRamMap.DoesExist(modelKey)
+        return modelRamMap[modelKey]
+    end if
+
+    return -1
+end function
+
+function getRokuModelMemoryLevel(model as dynamic) as string
+    ramMb = getRokuModelRamMB(model)
+    if ramMb < 0
+        return "normal"
+    end if
+
+    if ramMb <= 512
+        return "critical"
+    end if
+
+    if ramMb <= 1024
+        return "low"
+    end if
+
+    return "normal"
+end function
+
+function normalizeRokuModelKey(model as dynamic) as string
+    if not isValid(model) then return ""
+
+    modelString = UCase(toString(model)).Trim()
+    if modelString = "" then return ""
+
+    regex = CreateObject("roRegex", "[^A-Z0-9]", "")
+    return regex.ReplaceAll(modelString, "")
+end function
