@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/images/channel-poster_fhd.png" style="border: 1px solid #eee; border-radius: 4px" /></p>
+<p align="center"><img src="images/channel-poster_fhd.png" style="border: 1px solid #eee; border-radius: 4px" /></p>
 
 <h1 align="center">PresserFin for Roku</h1>
 <p align="center">The official <strong>PresserFin</strong> Roku client.</p>
@@ -9,10 +9,10 @@
 
 <h2>Screenshots</h2>
 <p align="center">
-<a href="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/home.jpg" title="Home Screen"><img src="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/home.jpg" style="border: 1px solid #eee;" width="300" alt="Home Screen" /></a>
-<a href="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/movieDetails.jpg" title="Movie Details"><img src="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/movieDetails.jpg" style="border: 1px solid #eee;" width="300" alt="Movie Details" /></a>
-<a href="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/musicPlayback.jpg" title="Music Playback"><img src="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/musicPlayback.jpg" style="border: 1px solid #eee;" width="300" alt="Music Playback" /></a>
-<a href="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/tvLibrary.jpg" title="TV Show Library"><img src="https://raw.githubusercontent.com/presserfin/presserfin-roku/master/screenshots/tvLibrary.jpg" style="border: 1px solid #eee;" width="300" alt="TV Show Library" /></a>
+<a href="screenshots/home.jpg" title="Home Screen"><img src="screenshots/home.jpg" style="border: 1px solid #eee;" width="300" alt="Home Screen" /></a>
+<a href="screenshots/movieDetails.jpg" title="Movie Details"><img src="screenshots/movieDetails.jpg" style="border: 1px solid #eee;" width="300" alt="Movie Details" /></a>
+<a href="screenshots/musicPlayback.jpg" title="Music Playback"><img src="screenshots/musicPlayback.jpg" style="border: 1px solid #eee;" width="300" alt="Music Playback" /></a>
+<a href="screenshots/tvLibrary.jpg" title="TV Show Library"><img src="screenshots/tvLibrary.jpg" style="border: 1px solid #eee;" width="300" alt="TV Show Library" /></a>
 </p>
 
 ## Advanced
