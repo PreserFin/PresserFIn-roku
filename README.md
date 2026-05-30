@@ -4,8 +4,8 @@
 <p align="center">The official <strong>PresserFin</strong> Roku client.</p>
 <p align="center">Navigate your PresserFin library and watch, listen, and view your media.</p>
 <p align="center">Cool features include song lyric support, trickplay images, media segment support, downloading subtitles direct from your Roku, and more.</p>
-<h2 align="center">Part of the <a href="https://presserfin.org">PresserFin Project</a></h2>
-<p align="center"><a href="https://channelstore.roku.com/en-ca/details/4d9e526a7d972d4decf98ea6a84000f7:c617f4902629cc0bd1e1411db1775cf3/presserfin">Roku Channel Store</a></p>
+<h2 align="center">Part of the PresserFin Project</h2>
+<p align="center">Available in the Roku Channel Store</p>
 
 <h2>Screenshots</h2>
 <p align="center">

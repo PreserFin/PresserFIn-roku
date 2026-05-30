@@ -5,8 +5,8 @@
 <context>
     <name>default</name>
     <message>
-        <source>192.168.1.100:8096 or https://example.com/presserfin</source>
-        <translation>192.168.1.100:8096 أو https://example.com/presserfin</translation>
+        <source>192.168.1.100:8096</source>
+        <translation>192.168.1.100:8096</translation>
     </message>
     <message>
         <source>Cancel</source>
