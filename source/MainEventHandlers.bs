@@ -1373,7 +1373,7 @@ sub onStateEvent(msg)
         if isStringEqual(node.selectedItemType, ItemType.TVCHANNEL)
             thisItem = {
                 id: node.id,
-                type: ItemType.RECORDING
+                type: ItemType.TVCHANNEL
             }
 
             MainAction.playItem(thisItem, { resetShuffle: true })
@@ -1414,6 +1414,10 @@ sub onRoDeviceInfoEvent(msg)
 
     if isValid(event.generalMemoryLevel)
         print "event.generalMemoryLevel = ", event.generalMemoryLevel
+
+        tmpSession = m.global.session
+        tmpSession.AddReplace("memoryLevel", normalizeMemoryLevel(event.generalMemoryLevel))
+        m.global.setFields({ session: tmpSession })
         return
     end if
 
@@ -1437,6 +1441,29 @@ sub onRoDeviceInfoEvent(msg)
         return
     end if
 end sub
+
+function normalizeMemoryLevel(memoryLevel as dynamic) as string
+    if not isValid(memoryLevel) then return "normal"
+
+    memoryString = LCase(toString(memoryLevel))
+    if isStringEqual(memoryString, "critical")
+        return "critical"
+    end if
+    if isStringEqual(memoryString, "low")
+        return "low"
+    end if
+
+    ' Handle possible numeric-like memory levels defensively.
+    memoryInteger = memoryString.ToInt()
+    if memoryString = "2" or (isValid(memoryInteger) and memoryInteger >= 2)
+        return "critical"
+    end if
+    if memoryString = "1" or (isValid(memoryInteger) and memoryInteger = 1)
+        return "low"
+    end if
+
+    return "normal"
+end function
 
 sub onReturnDataEvent(msg)
     ' User has chosen an option in a radio dialog

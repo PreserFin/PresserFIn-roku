@@ -3,14 +3,17 @@ import "pkg:/source/api/baserequest.bs"
 import "pkg:/source/api/userauth.bs"
 import "pkg:/source/enums/LiveTVScreen.bs"
 import "pkg:/source/enums/String.bs"
+import "pkg:/source/utils/rokuModelMemory.bs"
 import "pkg:/source/utils/misc.bs"
 
 namespace session
     ' Initialize the global session array
     sub Init()
+        defaultMemoryLevel = getRokuModelMemoryLevel(chainLookupReturn(m.global, "device.model", ""))
+
         m.global.addFields({
             session: {
-                "memoryLevel": "normal",
+                "memoryLevel": defaultMemoryLevel,
                 server: {},
                 user: {
                     Configuration: {},

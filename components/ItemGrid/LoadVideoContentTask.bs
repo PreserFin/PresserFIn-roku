@@ -246,11 +246,23 @@ sub LoadItems_AddVideoContent(video as object, mediaSourceId as dynamic, audio_s
         return
     end if
 
+    if not hasValidPlaybackInfo(m.playbackInfo)
+        video.errorMsg = "Error loading playback info"
+        video.content = invalid
+        return
+    end if
+
     ' If forceTranscode setting is enabled, but we haven't set the transcode codec yet, set it now and update Playback Info
     if isStringEqual(PlaybackMethod.FORCETRANSCODEDISABLEREMUX, chainLookupReturn(m.global.session, "user.settings.`playback.media.forceTranscode`", PlaybackMethod.PLAYNORMALLY))
         setTranscodeCodec(video, mediaSourceId, audio_stream_idx, m.top.selectedSubtitleIndex, playbackPosition)
     else if meta.live and isStringEqual(PlaybackMethod.FORCETRANSCODEDISABLEREMUX, chainLookupReturn(m.global.session, "user.settings.`playback.media.forceTranscodeLiveTV`", PlaybackMethod.PLAYNORMALLY))
         setTranscodeCodec(video, mediaSourceId, audio_stream_idx, m.top.selectedSubtitleIndex, playbackPosition)
+    end if
+
+    if video.content = invalid or not hasValidPlaybackInfo(m.playbackInfo)
+        video.errorMsg = "Error loading playback info"
+        video.content = invalid
+        return
     end if
 
     addSubtitlesToVideo(video, meta)
@@ -344,6 +356,11 @@ sub LoadItems_AddVideoContent(video as object, mediaSourceId as dynamic, audio_s
         m.playbackInfo = ItemPostPlaybackInfo(video.id, mediaSourceId, audio_stream_idx, m.top.selectedSubtitleIndex, playbackPosition, {
             emptySubtitleProfiles: true
         })
+        if not hasValidPlaybackInfo(m.playbackInfo)
+            video.errorMsg = "Error loading playback info"
+            video.content = invalid
+            return
+        end if
         ' Re-posting playback info will generate a new PlaysessionId
         video.PlaySessionId = m.playbackInfo.PlaySessionId
         video.subtitlesBurnedIn = true
@@ -378,6 +395,13 @@ end sub
 function isHTTPStream() as boolean
     if not m.playbackInfo.MediaSources[0].LookupCI("isremote") then return false
     if not isStringEqual(m.playbackInfo.MediaSources[0].LookupCI("VideoType"), "VideoFile") then return false
+    return true
+end function
+
+function hasValidPlaybackInfo(playbackInfo as dynamic) as boolean
+    if not isValid(playbackInfo) then return false
+    if not isValidAndNotEmpty(playbackInfo.MediaSources) then return false
+    if not isValid(playbackInfo.MediaSources[0]) then return false
     return true
 end function
 

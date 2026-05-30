@@ -4,10 +4,38 @@ import "pkg:/source/enums/String.bs"
 import "pkg:/source/enums/TaskControl.bs"
 import "pkg:/source/utils/misc.bs"
 
+const DEFAULT_CHANNEL_SCHEDULE_LIMIT = 48
+const LOW_MEMORY_CHANNEL_SCHEDULE_LIMIT = 28
+const CRITICAL_MEMORY_CHANNEL_SCHEDULE_LIMIT = 16
+const MIN_CHANNEL_SCHEDULE_LIMIT = 8
+const MAX_CHANNEL_SCHEDULE_LIMIT = 60
+const DEFAULT_ESTIMATED_PROGRAMS_PER_CHANNEL = 24.0
+const DEFAULT_ESTIMATED_PROGRAM_JSON_BYTES = 1200.0
+const DEFAULT_ESTIMATED_CHANNEL_JSON_BYTES = 420.0
+const TARGET_BATCH_JSON_BYTES_NORMAL = 1008000.0
+const TARGET_BATCH_JSON_BYTES_LOW = 672000.0
+const TARGET_BATCH_JSON_BYTES_CRITICAL = 432000.0
+const MAX_INITIAL_BATCHES_NORMAL = 2
+const MAX_INITIAL_BATCHES_CONSTRAINED = 1
+const SCHEDULE_PREFETCH_THRESHOLD_MIN = 4
+
 sub init()
     m.state = TaskControl.RUN
-    m.channelScheduleLimit = 50
+    m.channelScheduleLimit = DEFAULT_CHANNEL_SCHEDULE_LIMIT
     m.channelScheduleLoadedCount = 0
+    m.channelScheduleRequestedCount = 0
+    m.initialScheduleBatchesLoaded = 0
+    m.channelSchedulePrefetchThreshold = SCHEDULE_PREFETCH_THRESHOLD_MIN
+    m.pendingTimeWindowLoad = false
+    m.timeWindowLoadStartIndex = 0
+    m.pendingTimeWindowStart = ""
+    m.pendingTimeWindowEnd = ""
+    m.lastRequestedChannelBatchCount = 0
+    m.avgProgramsPerChannel = DEFAULT_ESTIMATED_PROGRAMS_PER_CHANNEL
+    m.avgProgramJsonBytes = DEFAULT_ESTIMATED_PROGRAM_JSON_BYTES
+    m.avgChannelJsonBytes = DEFAULT_ESTIMATED_CHANNEL_JSON_BYTES
+    m.guideBatchLoadTimer = CreateObject("roTimespan")
+    m.guideBatchContext = "initial"
 
     m.EPGLaunchCompleteSignaled = false
     m.scheduleGrid = m.top.findNode("scheduleGrid")
@@ -82,9 +110,7 @@ sub onFilterSet()
     m.LoadScheduleTask.schedule = []
     m.LoadScheduleTask.channelIds = string.EMPTY
 
-    m.loadedChannels = {}
-    m.channelIdList = []
-    m.channelIndex = {}
+    resetSchedulePaging()
 
     loadChannelList()
 end sub
@@ -103,10 +129,7 @@ sub onSearchTermSet()
     end if
 
     m.gridData.removeChildren(m.gridData.getChildren(-1, 0))
-    m.channelScheduleLoadedCount = 0
-    m.loadedChannels = {}
-    m.channelIdList = []
-    m.channelIndex = {}
+    resetSchedulePaging()
 
     loadChannelList()
 end sub
@@ -117,6 +140,7 @@ sub onChannelListLoaded()
     m.LoadChannelsTask.unobserveField("channels")
 
     counter = 0
+    totalChannelJsonBytes = 0.0
     m.channelIdList = []
     m.channelIndex = {}
 
@@ -130,8 +154,16 @@ sub onChannelListLoaded()
         m.gridData.appendChild(item)
         m.channelIndex[item.Id] = counter
         m.channelIdList.push(item.Id)
+        totalChannelJsonBytes = totalChannelJsonBytes + estimateNodeJsonBytes(item)
         counter++
     end for
+
+    if counter > 0
+        m.avgChannelJsonBytes = totalChannelJsonBytes / counter
+    end if
+
+    m.channelScheduleLimit = getChannelScheduleBatchSize(m.channelIdList.count())
+    m.channelSchedulePrefetchThreshold = getChannelSchedulePrefetchThreshold()
 
     loadScheduleData()
 
@@ -145,26 +177,41 @@ end sub
 
 sub loadScheduleData()
     if not isStringEqual(m.state, TaskControl.RUN) then return
+    if m.pendingTimeWindowLoad then return
+    if not hasMoreChannelSchedulesToLoad() then return
+
+    m.channelScheduleLimit = getChannelScheduleBatchSize(m.channelIdList.count())
     m.LoadScheduleTask.control = TaskControl.STOP
+    m.LoadScheduleTask.startTime = m.gridStartDate.ToISOString()
+    m.LoadScheduleTask.endTime = m.gridEndDate.ToISOString()
+
+    startingIndex = m.channelScheduleRequestedCount
+    endingIndex = startingIndex + m.channelScheduleLimit
+    channelIdBatch = m.channelIdList.slice(startingIndex, endingIndex)
+    if channelIdBatch.count() = 0 then return
 
     m.LoadScheduleTask.observeField("schedule", "onScheduleLoaded")
-
-    startingIndex = m.channelScheduleLoadedCount >= 1 ? m.channelScheduleLoadedCount - 1 : 0
-
-    m.LoadScheduleTask.channelIds = m.channelIdList.slice(startingIndex, startingIndex + m.channelScheduleLimit).join(", ")
+    m.guideBatchContext = "channels"
+    m.lastRequestedChannelBatchCount = channelIdBatch.count()
+    m.guideBatchLoadTimer.Mark()
+    m.channelScheduleRequestedCount = startingIndex + channelIdBatch.count()
+    m.LoadScheduleTask.channelIds = channelIdBatch.join(", ")
     m.LoadScheduleTask.control = TaskControl.RUN
 end sub
 
 ' When LoadScheduleTask completes (initial or more data) and we have a schedule to display
 sub onScheduleLoaded()
     m.LoadScheduleTask.unobserveField("schedule")
+    scheduleItems = isValidAndNotEmpty(m.LoadScheduleTask.schedule) ? m.LoadScheduleTask.schedule : []
+    scheduleItemsCount = scheduleItems.count()
 
     ' make sure we actually have a schedule (i.e. filter by favorites, but no channels have been favorited)
     if m.scheduleGrid.content.GetChildCount() <= 0
         return
     end if
 
-    for each item in m.LoadScheduleTask.schedule
+    totalProgramJsonBytes = 0.0
+    for each item in scheduleItems
         channelIndex = m.channelIndex[item.ChannelId]
         if not isValid(channelIndex) then continue for
 
@@ -180,26 +227,37 @@ sub onScheduleLoaded()
         end if
 
         channel.appendChild(item)
+        totalProgramJsonBytes = totalProgramJsonBytes + estimateNodeJsonBytes(item)
 
         m.loadedChannels[item.ChannelId] = 1
     end for
 
+    updateScheduleDensityEstimate(scheduleItemsCount)
+    updateProgramSizeEstimate(totalProgramJsonBytes, scheduleItemsCount)
+    maybeLogGuideBatch(scheduleItemsCount, totalProgramJsonBytes)
+
     m.scheduleGrid.showLoadingDataFeedback = false
 
     group = m.global.sceneManager.callFunc("getActiveScene")
-    group.lastFocus = m.scheduleGrid
+    if isValid(group)
+        group.lastFocus = m.scheduleGrid
+    end if
     stopLoadingSpinner()
 
     m.channelScheduleLoadedCount = m.loadedChannels.count()
     m.LoadScheduleTask.schedule = invalid
+    m.initialScheduleBatchesLoaded = m.initialScheduleBatchesLoaded + 1
+    m.channelScheduleLimit = getChannelScheduleBatchSize(m.channelIdList.count())
+    m.channelSchedulePrefetchThreshold = getChannelSchedulePrefetchThreshold()
 
-    ' Received fewer channels than requested, so we likely have an incomplete EPG
-    ' Don't try to load any more channels even if we haven't hit the expected number of channels
-    if m.channelScheduleLoadedCount < m.channelScheduleLimit
+    if m.pendingTimeWindowLoad
+        loadScheduleTimeWindowBatch()
         return
     end if
 
-    if m.LoadChannelsTask.totalRecordCount > m.channelScheduleLoadedCount
+    ' Reduce initial launch delay by loading only a small number of batches up front.
+    maxInitialBatches = getMaxInitialScheduleBatches()
+    if m.initialScheduleBatchesLoaded < maxInitialBatches and hasMoreChannelSchedulesToLoad()
         loadScheduleData()
     end if
 end sub
@@ -207,11 +265,17 @@ end sub
 sub onProgramFocused()
     m.top.watchChannel = invalid
 
+    maybeLoadMoreChannelScheduleData()
+
+    focusDetails = m.scheduleGrid.programFocusedDetails
+    if not isValid(focusDetails) then return
+
     ' Make sure we have channels (i.e. filter set to favorite yet there are none)
     if m.scheduleGrid.content.getChildCount() <= 0
         channel = invalid
     else
-        channel = m.scheduleGrid.content.GetChild(m.scheduleGrid.programFocusedDetails.focusChannelIndex)
+        if not isValid(focusDetails.focusChannelIndex) then return
+        channel = m.scheduleGrid.content.GetChild(focusDetails.focusChannelIndex)
     end if
 
     m.detailsPane.channel = channel
@@ -224,12 +288,13 @@ sub onProgramFocused()
         return
     end if
 
-    prog = channel.GetChild(m.scheduleGrid.programFocusedDetails.focusIndex)
+    if not isValid(focusDetails.focusIndex) then return
+    prog = channel.GetChild(focusDetails.focusIndex)
 
     if prog <> invalid and prog.fullyLoaded = false
         m.LoadProgramDetailsTask.programId = prog.Id
-        m.LoadProgramDetailsTask.channelIndex = m.scheduleGrid.programFocusedDetails.focusChannelIndex
-        m.LoadProgramDetailsTask.programIndex = m.scheduleGrid.programFocusedDetails.focusIndex
+        m.LoadProgramDetailsTask.channelIndex = focusDetails.focusChannelIndex
+        m.LoadProgramDetailsTask.programIndex = focusDetails.focusIndex
         m.LoadProgramDetailsTask.control = "RUN"
     end if
 
@@ -241,7 +306,12 @@ sub onProgramDetailsLoaded()
     if not isStringEqual(m.state, TaskControl.RUN) then return
 
     if m.LoadProgramDetailsTask.programDetails = invalid then return
+    if not isValid(m.scheduleGrid.content) then return
+    if not isValid(m.LoadProgramDetailsTask.programDetails.channelIndex) then return
+    if not isValid(m.LoadProgramDetailsTask.programDetails.programIndex) then return
+
     channel = m.scheduleGrid.content.GetChild(m.LoadProgramDetailsTask.programDetails.channelIndex)
+    if not isValid(channel) then return
 
     ' If TV Show does not have its own image, use the channel logo
     if m.LoadProgramDetailsTask.programDetails.PosterUrl = invalid or m.LoadProgramDetailsTask.programDetails.PosterUrl = ""
@@ -254,9 +324,14 @@ sub onProgramDetailsLoaded()
 end sub
 
 sub onProgramSelected()
+    if not isValid(m.scheduleGrid.programFocusedDetails) then return
+
     ' If there is no program data - view the channel
     if m.detailsPane.programDetails = invalid
-        m.top.watchChannel = m.scheduleGrid.content.GetChild(m.scheduleGrid.programFocusedDetails.focusChannelIndex)
+        focusChannelIndex = m.scheduleGrid.programFocusedDetails.focusChannelIndex
+        if isValid(focusChannelIndex)
+            m.top.watchChannel = m.scheduleGrid.content.GetChild(focusChannelIndex)
+        end if
         return
     end if
 
@@ -305,13 +380,15 @@ sub onGridScrolled()
     ' If we're within 12 hours of end of grid, load next 24hrs of data
     if m.scheduleGrid.leftEdgeTargetTime + (12 * 60 * 60) > m.gridEndDate.AsSeconds()
 
-        ' Ensure the task is not already (still) running,
-        if m.LoadScheduleTask.state <> "run"
-            m.LoadScheduleTask.startTime = m.gridEndDate.ToISOString()
-            m.gridEndDate.FromSeconds(m.gridEndDate.AsSeconds() + (24 * 60 * 60))
-            m.LoadScheduleTask.endTime = m.gridEndDate.ToISOString()
-            m.LoadScheduleTask.control = "RUN"
-        end if
+        if m.pendingTimeWindowLoad or m.LoadScheduleTask.state = "run" then return
+
+        m.pendingTimeWindowStart = m.gridEndDate.ToISOString()
+        m.gridEndDate.FromSeconds(m.gridEndDate.AsSeconds() + (24 * 60 * 60))
+        m.pendingTimeWindowEnd = m.gridEndDate.ToISOString()
+
+        m.pendingTimeWindowLoad = true
+        m.timeWindowLoadStartIndex = 0
+        loadScheduleTimeWindowBatch()
     end if
 end sub
 
@@ -390,13 +467,226 @@ function onKeyEvent(key as string, press as boolean) as boolean
         m.LoadScheduleTask.schedule = []
         m.LoadScheduleTask.channelIds = string.EMPTY
 
-        m.loadedChannels = {}
-        m.channelIdList = []
-        m.channelIndex = {}
+        resetSchedulePaging()
 
         m.global.sceneManager.callFunc("popScene")
         return true
     end if
 
     return false
+end function
+
+sub loadScheduleTimeWindowBatch()
+    if not m.pendingTimeWindowLoad then return
+    if m.LoadScheduleTask.state = "run" then return
+
+    requestedChannelCount = m.channelScheduleRequestedCount
+    if requestedChannelCount <= 0
+        m.pendingTimeWindowLoad = false
+        m.pendingTimeWindowStart = ""
+        m.pendingTimeWindowEnd = ""
+        return
+    end if
+
+    if m.timeWindowLoadStartIndex >= requestedChannelCount
+        m.pendingTimeWindowLoad = false
+        m.pendingTimeWindowStart = ""
+        m.pendingTimeWindowEnd = ""
+        return
+    end if
+
+    m.channelScheduleLimit = getChannelScheduleBatchSize(m.channelIdList.count())
+    endingIndex = m.timeWindowLoadStartIndex + m.channelScheduleLimit
+    channelIdBatch = m.channelIdList.slice(m.timeWindowLoadStartIndex, endingIndex)
+
+    if channelIdBatch.count() = 0
+        m.pendingTimeWindowLoad = false
+        m.pendingTimeWindowStart = ""
+        m.pendingTimeWindowEnd = ""
+        return
+    end if
+
+    m.LoadScheduleTask.observeField("schedule", "onScheduleLoaded")
+    m.guideBatchContext = "timeWindow"
+    m.lastRequestedChannelBatchCount = channelIdBatch.count()
+    m.guideBatchLoadTimer.Mark()
+    m.LoadScheduleTask.startTime = m.pendingTimeWindowStart
+    m.LoadScheduleTask.endTime = m.pendingTimeWindowEnd
+    m.LoadScheduleTask.channelIds = channelIdBatch.join(", ")
+    m.timeWindowLoadStartIndex = m.timeWindowLoadStartIndex + channelIdBatch.count()
+    m.LoadScheduleTask.control = "RUN"
+end sub
+
+sub maybeLoadMoreChannelScheduleData()
+    if m.pendingTimeWindowLoad then return
+    if m.LoadScheduleTask.state = "run" then return
+    if not hasMoreChannelSchedulesToLoad() then return
+
+    focusedChannelIndex = chainLookupReturn(m.scheduleGrid, "programFocusedDetails.focusChannelIndex", -1)
+    if focusedChannelIndex < 0 then return
+
+    if focusedChannelIndex + m.channelSchedulePrefetchThreshold >= m.channelScheduleRequestedCount
+        loadScheduleData()
+    end if
+end sub
+
+function hasMoreChannelSchedulesToLoad() as boolean
+    return m.channelScheduleRequestedCount < m.channelIdList.count()
+end function
+
+function getMaxInitialScheduleBatches() as integer
+    memoryLevel = getRuntimeMemoryLevel()
+    if isStringEqual(memoryLevel, "critical") or isStringEqual(memoryLevel, "low")
+        return MAX_INITIAL_BATCHES_CONSTRAINED
+    end if
+
+    return MAX_INITIAL_BATCHES_NORMAL
+end function
+
+function getChannelScheduleBatchSize(channelCount = invalid as dynamic) as integer
+    memoryLevel = getRuntimeMemoryLevel()
+    memoryCap = DEFAULT_CHANNEL_SCHEDULE_LIMIT
+
+    if isStringEqual(memoryLevel, "critical")
+        memoryCap = CRITICAL_MEMORY_CHANNEL_SCHEDULE_LIMIT
+    else if isStringEqual(memoryLevel, "low")
+        memoryCap = LOW_MEMORY_CHANNEL_SCHEDULE_LIMIT
+    end if
+
+    targetProgramsPerBatch = getTargetProgramsPerBatch()
+    estimatedProgramsPerChannel = m.avgProgramsPerChannel
+    if not isValid(estimatedProgramsPerChannel) or estimatedProgramsPerChannel <= 0
+        estimatedProgramsPerChannel = DEFAULT_ESTIMATED_PROGRAMS_PER_CHANNEL
+    end if
+
+    densityLimit = Fix(targetProgramsPerBatch / estimatedProgramsPerChannel)
+    if densityLimit < MIN_CHANNEL_SCHEDULE_LIMIT
+        densityLimit = MIN_CHANNEL_SCHEDULE_LIMIT
+    end if
+    if densityLimit > MAX_CHANNEL_SCHEDULE_LIMIT
+        densityLimit = MAX_CHANNEL_SCHEDULE_LIMIT
+    end if
+
+    scheduleLimit = densityLimit
+    if scheduleLimit > memoryCap
+        scheduleLimit = memoryCap
+    end if
+
+    if scheduleLimit < MIN_CHANNEL_SCHEDULE_LIMIT
+        scheduleLimit = MIN_CHANNEL_SCHEDULE_LIMIT
+    end if
+
+    if isValid(channelCount) and channelCount > 0 and scheduleLimit > channelCount
+        scheduleLimit = channelCount
+    end if
+
+    return scheduleLimit
+end function
+
+function getTargetProgramsPerBatch() as integer
+    targetBatchJsonBytes = getTargetBatchJsonBytes()
+    avgProgramJsonBytes = m.avgProgramJsonBytes
+    if not isValid(avgProgramJsonBytes) or avgProgramJsonBytes <= 0
+        avgProgramJsonBytes = DEFAULT_ESTIMATED_PROGRAM_JSON_BYTES
+    end if
+
+    return Fix(targetBatchJsonBytes / avgProgramJsonBytes)
+end function
+
+function getTargetBatchJsonBytes() as float
+    memoryLevel = getRuntimeMemoryLevel()
+    if isStringEqual(memoryLevel, "critical")
+        return TARGET_BATCH_JSON_BYTES_CRITICAL
+    end if
+
+    if isStringEqual(memoryLevel, "low")
+        return TARGET_BATCH_JSON_BYTES_LOW
+    end if
+
+    return TARGET_BATCH_JSON_BYTES_NORMAL
+end function
+
+function getChannelSchedulePrefetchThreshold() as integer
+    threshold = Fix(m.channelScheduleLimit / 3)
+    if threshold < SCHEDULE_PREFETCH_THRESHOLD_MIN
+        return SCHEDULE_PREFETCH_THRESHOLD_MIN
+    end if
+
+    return threshold
+end function
+
+function getRuntimeMemoryLevel() as string
+    memoryLevel = chainLookupReturn(m.global, "session.memoryLevel", "normal")
+    if not isValid(memoryLevel) then return "normal"
+
+    memoryLevelString = LCase(toString(memoryLevel))
+    if isStringEqual(memoryLevelString, "critical") or isStringEqual(memoryLevelString, "low")
+        return memoryLevelString
+    end if
+
+    return "normal"
+end function
+
+sub resetSchedulePaging()
+    m.channelScheduleLoadedCount = 0
+    m.channelScheduleRequestedCount = 0
+    m.initialScheduleBatchesLoaded = 0
+    m.pendingTimeWindowLoad = false
+    m.timeWindowLoadStartIndex = 0
+    m.pendingTimeWindowStart = ""
+    m.pendingTimeWindowEnd = ""
+    m.lastRequestedChannelBatchCount = 0
+    m.avgProgramsPerChannel = DEFAULT_ESTIMATED_PROGRAMS_PER_CHANNEL
+    m.avgProgramJsonBytes = DEFAULT_ESTIMATED_PROGRAM_JSON_BYTES
+    m.avgChannelJsonBytes = DEFAULT_ESTIMATED_CHANNEL_JSON_BYTES
+    m.guideBatchContext = "initial"
+    m.loadedChannels = {}
+    m.channelIdList = []
+    m.channelIndex = {}
+end sub
+
+sub updateScheduleDensityEstimate(scheduleItemsCount as integer)
+    if m.lastRequestedChannelBatchCount <= 0 then return
+
+    programsPerChannel = scheduleItemsCount / m.lastRequestedChannelBatchCount
+    if programsPerChannel <= 0 then return
+
+    if not isValid(m.avgProgramsPerChannel) or m.avgProgramsPerChannel <= 0
+        m.avgProgramsPerChannel = programsPerChannel
+        return
+    end if
+
+    ' Exponential smoothing to avoid noisy swings between batches.
+    m.avgProgramsPerChannel = (m.avgProgramsPerChannel * 0.75) + (programsPerChannel * 0.25)
+end sub
+
+sub updateProgramSizeEstimate(totalProgramJsonBytes as float, scheduleItemsCount as integer)
+    if scheduleItemsCount <= 0 then return
+
+    batchAvgProgramJsonBytes = totalProgramJsonBytes / scheduleItemsCount
+    if batchAvgProgramJsonBytes <= 0 then return
+
+    if not isValid(m.avgProgramJsonBytes) or m.avgProgramJsonBytes <= 0
+        m.avgProgramJsonBytes = batchAvgProgramJsonBytes
+        return
+    end if
+
+    m.avgProgramJsonBytes = (m.avgProgramJsonBytes * 0.75) + (batchAvgProgramJsonBytes * 0.25)
+end sub
+
+sub maybeLogGuideBatch(scheduleItemsCount as integer, totalProgramJsonBytes = 0.0 as float)
+    if not chainLookupReturn(m.global, "app.isDev", false) then return
+    if not isValid(m.guideBatchLoadTimer) then return
+
+    elapsedMs = m.guideBatchLoadTimer.TotalMilliseconds()
+    print "[LiveTV Guide] context="; m.guideBatchContext; " mem="; getRuntimeMemoryLevel(); " reqChannels="; m.lastRequestedChannelBatchCount; " items="; scheduleItemsCount; " avgPerChannel="; m.avgProgramsPerChannel; " avgProgramJsonBytes="; m.avgProgramJsonBytes; " avgChannelJsonBytes="; m.avgChannelJsonBytes; " payloadBytes="; totalProgramJsonBytes; " batchLimit="; m.channelScheduleLimit; " elapsedMs="; elapsedMs
+end sub
+
+function estimateNodeJsonBytes(node as dynamic) as float
+    if not isChainValid(node, "json") then return 0.0
+
+    jsonString = FormatJson(node.json)
+    if not isValidAndNotEmpty(jsonString) then return 0.0
+
+    return jsonString.Len()
 end function
