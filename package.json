@@ -1,8 +1,8 @@
 {
-  "name": "jellyfin",
+  "name": "presserfin",
   "type": "module",
   "version": "3.2.0",
-  "description": "Official Roku app for Jellyfin media server",
+  "description": "Official Roku app for PresserFin media server",
   "dependencies": {
     "@rokucommunity/bslib": "0.1.1",
     "brighterscript-formatter": "1.7.26"
@@ -20,18 +20,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jellyfin/jellyfin-roku.git"
+    "url": "https://github.com/presserfin/presserfin-roku.git"
   },
   "keywords": [
-    "jellyfin",
+    "presserfin",
     "roku",
     "music",
     "movies"
   ],
-  "author": "Jellyfin",
+  "author": "PresserFin",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/jellyfin/jellyfin-roku"
+    "url": "https://github.com/presserfin/presserfin-roku"
   },
-  "homepage": "https://github.com/jellyfin/jellyfin-roku"
+  "homepage": "https://github.com/presserfin/presserfin-roku"
 }

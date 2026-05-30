@@ -6,7 +6,7 @@ sub setConstants()
     globals.addFields({
         constants: {
 
-            jellyfin_server: "jellyfin server",
+            presserfin_server: "presserfin server",
 
             poster_bg_pallet: ["#00455c", "#44bae1", "#00a4db", "#1c4c5c", "#007ea8"],
 

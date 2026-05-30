@@ -5,8 +5,8 @@
 <context>
     <name>default</name>
     <message>
-        <source>192.168.1.100:8096 or https://example.com/jellyfin</source>
-        <translation>192.168.1.100:8096 o https://example.com/jellyfin</translation>
+        <source>192.168.1.100:8096 or https://example.com/presserfin</source>
+        <translation>192.168.1.100:8096 o https://example.com/presserfin</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -642,8 +642,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Remember the currently logged in user and try to log them in again next time you start the Jellyfin app.</source>
-        <translation>Ricorda l&apos;utente attualmente connesso e prova a loggarlo nuovamente la prossima volta che avvi Jellyfin.</translation>
+        <source>Remember the currently logged in user and try to log them in again next time you start the PresserFin app.</source>
+        <translation>Ricorda l&apos;utente attualmente connesso e prova a loggarlo nuovamente la prossima volta che avvi PresserFin.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -652,8 +652,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Imposta la disposizione della Home di Roku come quella del client web. È necessario riavviare Jellyfin affinché l&apos;opzione abbia effetto.</translation>
+        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Imposta la disposizione della Home di Roku come quella del client web. È necessario riavviare PresserFin affinché l&apos;opzione abbia effetto.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -786,8 +786,8 @@
         <translation>C&apos;è stato un errore di autenticazione durante la Connesione Rapida.</translation>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Nascondi tutti gli orologi in Jellyfin. È necessario il riavvio di Jellyfin affinché i cambi abbiano effetto.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Nascondi tutti gli orologi in PresserFin. È necessario il riavvio di PresserFin affinché i cambi abbiano effetto.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -814,8 +814,8 @@
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Usa pagina di splash generata come sfondo. Jellyfin dovrà essere riavviato perché i cambiamenti vengano applicati.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Usa pagina di splash generata come sfondo. PresserFin dovrà essere riavviato perché i cambiamenti vengano applicati.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -858,8 +858,8 @@
         <extracomment>Description of a setting - should we hide subtitles that might transcode</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Visualizza il popup Novità quando Jellyfin viene aggiornato ad una nuova versione.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Visualizza il popup Novità quando PresserFin viene aggiornato ad una nuova versione.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -1048,8 +1048,8 @@
         <extracomment>Content of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -1105,8 +1105,8 @@
         <translation>Elementi di design</translation>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Opzioni che modificano il design di Jellyfin.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Opzioni che modificano il design di PresserFin.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -1459,48 +1459,48 @@
         <translation>Azioni delle Sezioni dei Media</translation>
     </message>
     <message>
-        <source>Settings relating to how Jellyfin should handle media segments.</source>
-        <translation>Impostazioni legate a come Jellyfin dovrebbe gestire le sezioni media.</translation>
+        <source>Settings relating to how PresserFin should handle media segments.</source>
+        <translation>Impostazioni legate a come PresserFin dovrebbe gestire le sezioni media.</translation>
     </message>
     <message>
         <source>Commercial Segments</source>
         <translation>Sezioni Pubblicitarie</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for commercial segments?</source>
-        <translation>Che azione dovrebbe intraprendere Jellyfin per le sezioni commerciali?</translation>
+        <source>What action should PresserFin take for commercial segments?</source>
+        <translation>Che azione dovrebbe intraprendere PresserFin per le sezioni commerciali?</translation>
     </message>
     <message>
         <source>Intro Segments</source>
         <translation>Sezioni Intro</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for intro segments?</source>
-        <translation>Che azione dovrebbe intraprendere Jellyfin per le sezioni intro?</translation>
+        <source>What action should PresserFin take for intro segments?</source>
+        <translation>Che azione dovrebbe intraprendere PresserFin per le sezioni intro?</translation>
     </message>
     <message>
         <source>Outro Segments</source>
         <translation>Sezioni Titoli di coda</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for outro segments?</source>
-        <translation>Che azione dovrebbe intraprendere Jellyfin per le sezioni titoli di coda?</translation>
+        <source>What action should PresserFin take for outro segments?</source>
+        <translation>Che azione dovrebbe intraprendere PresserFin per le sezioni titoli di coda?</translation>
     </message>
     <message>
         <source>Preview Segments</source>
         <translation>Sezioni Anteprime</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for preview segments?</source>
-        <translation>Che azione dovrebbe intraprendere Jellyfin per le sezioni anteprima?</translation>
+        <source>What action should PresserFin take for preview segments?</source>
+        <translation>Che azione dovrebbe intraprendere PresserFin per le sezioni anteprima?</translation>
     </message>
     <message>
         <source>Recap Segments</source>
         <translation>Sezioni Riassunto</translation>
     </message>
     <message>
-        <source>What action should Jellyfin take for recap segments?</source>
-        <translation>Che azione dovrebbe intraprendere Jellyfin per le sezioni riassunto?</translation>
+        <source>What action should PresserFin take for recap segments?</source>
+        <translation>Che azione dovrebbe intraprendere PresserFin per le sezioni riassunto?</translation>
     </message>
     <message>
         <source>Ask To Skip</source>
@@ -1539,8 +1539,8 @@
         <translation>Dimentica i Filtri</translation>
     </message>
     <message>
-        <source>Forget applied library filters when Jellyfin is closed.</source>
-        <translation>Dimentica i filtri applicati alla libreria quando Jellyfin viene chiuso.</translation>
+        <source>Forget applied library filters when PresserFin is closed.</source>
+        <translation>Dimentica i filtri applicati alla libreria quando PresserFin viene chiuso.</translation>
     </message>
     <message>
         <source>Library Landscape Column Count</source>
@@ -1599,16 +1599,16 @@
         <translation>Usa Immagini Serie</translation>
     </message>
     <message>
-        <source>The selected Jellyfin server uses version</source>
-        <translation>Il server Jellyfin selezionato usa la versione</translation>
+        <source>The selected PresserFin server uses version</source>
+        <translation>Il server PresserFin selezionato usa la versione</translation>
     </message>
     <message>
         <source>which is not supported by this app. Please update the server to</source>
         <translation>che non è supportata da questa app. Per favore aggiorna il server alla versione</translation>
     </message>
     <message>
-        <source>or newer to use this app or install and use the Jellyfin Legacy app from Roku&apos;s Streaming Store</source>
-        <translation>o più recente per usare questa app o installa e usa la app Jellyfin Legacy dal Roku Streaming Store</translation>
+        <source>or newer to use this app or install and use the PresserFin Legacy app from Roku&apos;s Streaming Store</source>
+        <translation>o più recente per usare questa app o installa e usa la app PresserFin Legacy dal Roku Streaming Store</translation>
     </message>
     <message>
         <source>Return to server select screen</source>
@@ -1855,36 +1855,36 @@
         <translation>Sezione 8</translation>
     </message>
     <message>
-        <source>Select what to show in section 1. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 1. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 1. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 1. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
-        <source>Select what to show in section 2. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 2. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 2. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 2. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
-        <source>Select what to show in section 3. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 3. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 3. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 3. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
-        <source>Select what to show in section 4. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 4. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 4. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 4. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
-        <source>Select what to show in section 5. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 5. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 5. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 5. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
-        <source>Select what to show in section 6. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 6. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 6. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 6. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
-        <source>Select what to show in section 7. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 7. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 7. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 7. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
-        <source>Select what to show in section 8. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Selezione cosa mostrare nella sezione 8. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. Jellyfin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
+        <source>Select what to show in section 8. This setting has no effect if \&quot;Use Web Client&apos;s Home Section Arrangement\&quot; is enabled. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Selezione cosa mostrare nella sezione 8. Questa impostazione non ha effetto se \&quot;Usa l&apos;Organizzazione delle Sezioni Home dal Client Web\&quot; è abilitato. PresserFin avrà bisogno di essere chiuso e riaperto per applicare il cambiamento.</translation>
     </message>
     <message>
         <source>Live TV</source>
@@ -2371,8 +2371,8 @@
         <translation>Controlli Velocità di Playback (Sperimentale)</translation>
     </message>
     <message>
-        <source>Use at your own risk. We make no guarantees this will work for you. \n 1. This feature may not work on this device, yet work on others \n 2. Some speed options may not work on this device, yet work on others \n 3. Roku may block this feature without warning; even if the Jellyfin client doesn&apos;t update</source>
-        <translation>Usa a tuo rischio e pericolo. Non possiamo garantire che funzioni. \n 1. Questa funzione potrebbe non funzionare su questo dispositivo, ma funzionare su altri \n 2. Alcune opzioni di velocità potrebbero non funzionare su questo dispositivo, ma funzionare su altri \n 3. Roku potrebbe bloccare questa funzione senza avvisi; anche se il client Jellyfin non si aggiorna</translation>
+        <source>Use at your own risk. We make no guarantees this will work for you. \n 1. This feature may not work on this device, yet work on others \n 2. Some speed options may not work on this device, yet work on others \n 3. Roku may block this feature without warning; even if the PresserFin client doesn&apos;t update</source>
+        <translation>Usa a tuo rischio e pericolo. Non possiamo garantire che funzioni. \n 1. Questa funzione potrebbe non funzionare su questo dispositivo, ma funzionare su altri \n 2. Alcune opzioni di velocità potrebbero non funzionare su questo dispositivo, ma funzionare su altri \n 3. Roku potrebbe bloccare questa funzione senza avvisi; anche se il client PresserFin non si aggiorna</translation>
     </message>
 </context>
 <context>
@@ -2674,8 +2674,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -2901,8 +2901,8 @@
         <translation>Questa %1 non contiene elementi</translation>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -3170,8 +3170,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -3419,8 +3419,8 @@
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -3971,8 +3971,8 @@
         <extracomment>Title of KeyboardDialog when manually entering a server URL</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -4098,8 +4098,8 @@
         <translation>Controllo Parentale</translation>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -4500,8 +4500,8 @@
         <extracomment>Title of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -5046,8 +5046,8 @@
         <extracomment>Content of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -5401,8 +5401,8 @@
         <extracomment>Content of message box when the requested content is not found on the server</extracomment>
     </message>
     <message>
-        <source>Pick a Jellyfin server from the local network</source>
-        <translation>Scegli un server Jellyfin dalla rete locale:</translation>
+        <source>Pick a PresserFin server from the local network</source>
+        <translation>Scegli un server PresserFin dalla rete locale:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to pick a server from a list</extracomment>
     </message>
     <message>
@@ -5463,8 +5463,8 @@
         <extracomment>Button Text - When pressed, marks item as Warched</extracomment>
     </message>
     <message>
-        <source>Use generated splashscreen image as Jellyfin&apos;s home background. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Usa pagina di splash generata come sfondo. Jellyfin dovrà essere riavviato perché i cambiamenti vengano applicati.</translation>
+        <source>Use generated splashscreen image as PresserFin&apos;s home background. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Usa pagina di splash generata come sfondo. PresserFin dovrà essere riavviato perché i cambiamenti vengano applicati.</translation>
         <extracomment>Description for option in Setting Screen</extracomment>
     </message>
     <message>
@@ -5602,8 +5602,8 @@
         <translation>Elementi di design</translation>
     </message>
     <message>
-        <source>Options that alter the design of Jellyfin.</source>
-        <translation>Opzioni che modificano il design di Jellyfin.</translation>
+        <source>Options that alter the design of PresserFin.</source>
+        <translation>Opzioni che modificano il design di PresserFin.</translation>
         <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
     <message>
@@ -5621,8 +5621,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Remember the currently logged in user and try to log them in again next time you start the Jellyfin app.</source>
-        <translation>Ricorda l&apos;utente attualmente connesso e prova a loggarlo nuovamente la prossima volta che l&apos;app Jellyfin viene aperta.</translation>
+        <source>Remember the currently logged in user and try to log them in again next time you start the PresserFin app.</source>
+        <translation>Ricorda l&apos;utente attualmente connesso e prova a loggarlo nuovamente la prossima volta che l&apos;app PresserFin viene aperta.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -5678,8 +5678,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. Jellyfin will need to be closed and reopened for change to take effect.</source>
-        <translation>Imposta la disposizione della Home di Roku come quella del client web. È necessario riavviare Jellyfin affinché l&apos;opzione abbia effetto.</translation>
+        <source>Make the arrangement of the Roku home view sections match the web client&apos;s home screen. PresserFin will need to be closed and reopened for change to take effect.</source>
+        <translation>Imposta la disposizione della Home di Roku come quella del client web. È necessario riavviare PresserFin affinché l&apos;opzione abbia effetto.</translation>
         <extracomment>User Setting - Setting description</extracomment>
     </message>
     <message>
@@ -5780,8 +5780,8 @@
         <extracomment>User Setting - Setting title</extracomment>
     </message>
     <message>
-        <source>Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.</source>
-        <translation>Nascondi tutti gli orologi in Jellyfin. È necessario il riavvio di Jellyfin affinché i cambi abbiano effetto.</translation>
+        <source>Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.</source>
+        <translation>Nascondi tutti gli orologi in PresserFin. È necessario il riavvio di PresserFin affinché i cambi abbiano effetto.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
@@ -5836,8 +5836,8 @@
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>
-        <source>Show What&apos;s New popup when Jellyfin is updated to a new version.</source>
-        <translation>Visualizza il popup Novità quando Jellyfin viene aggiornato ad una nuova versione.</translation>
+        <source>Show What&apos;s New popup when PresserFin is updated to a new version.</source>
+        <translation>Visualizza il popup Novità quando PresserFin viene aggiornato ad una nuova versione.</translation>
         <extracomment>Settings Menu - Description for option</extracomment>
     </message>
     <message>

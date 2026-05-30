@@ -6,4 +6,4 @@ body:
   - type: markdown
     attributes:
       value: |
-        # <span style="color:red">Do not submit feature requests here! It will get closed. Feature requests MUST be submitted at https://features.jellyfin.org/</span>
+        # <span style="color:red">Do not submit feature requests here! It will get closed. Feature requests MUST be submitted at https://features.presserfin.org/</span>

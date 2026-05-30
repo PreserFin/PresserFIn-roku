@@ -1,5 +1,5 @@
 '
-' Task used to discover jellyfin servers on the local network
+' Task used to discover presserfin servers on the local network
 '
 sub init()
     m.top.functionName = "execute"
@@ -58,7 +58,7 @@ sub SendClientDiscoveryBroadcast()
     m.clientDiscovery.socket.SetSendToAddress(m.clientDiscovery.address)
     m.clientDiscovery.socket.NotifyReadable(true)
     m.clientDiscovery.socket.SetBroadcast(true)
-    m.clientDiscovery.socket.SendStr("Who is JellyfinServer?")
+    m.clientDiscovery.socket.SendStr("Who is PresserFinServer?")
 end sub
 
 sub ProcessClientDiscoveryResponse(message)
@@ -75,7 +75,7 @@ sub ProcessClientDiscoveryResponse(message)
                 iconHeight: 120
             })
         catch e
-            print `Error scanning for jellyfin server ${message}`
+            print `Error scanning for presserfin server ${message}`
         end try
     end if
 end sub
@@ -133,8 +133,8 @@ sub ProcessSSDPResponse(message)
     if xml.Parse(responseText)
         deviceNode = xml.GetNamedElementsCi("device")[0]
         manufacturer = deviceNode.GetNamedElementsCi("manufacturer").GetText()
-        'only process jellyfin servers
-        if lcase(manufacturer) = "jellyfin"
+        'only process presserfin servers
+        if lcase(manufacturer) = "presserfin"
             'find the largest icon
             width = 0
             server = invalid

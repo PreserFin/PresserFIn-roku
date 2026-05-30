@@ -29,13 +29,13 @@ sub pushScene(newGroup)
                 currentGroup.setFocus(false)
             end if
 
-            if currentGroup.isSubType("JFGroup")
+            if currentGroup.isSubType("PFGroup")
                 unregisterOverhangData(currentGroup)
             end if
 
             currentGroup.visible = false
 
-            if currentGroup.isSubType("JFScreen")
+            if currentGroup.isSubType("PFScreen")
                 currentGroup.callFunc("OnScreenHidden")
             end if
 
@@ -55,12 +55,12 @@ sub pushScene(newGroup)
             m.content.appendChild(newGroup)
         end if
 
-        if newGroup.isSubType("JFScreen")
+        if newGroup.isSubType("PFScreen")
             newGroup.callFunc("OnScreenShown")
         end if
 
         'observe info about new group, set overhang title, etc.
-        if newGroup.isSubType("JFGroup")
+        if newGroup.isSubType("PFGroup")
             registerOverhangData(newGroup)
 
             ' Some groups set focus to a specific component within init(), so we don't want to
@@ -80,13 +80,13 @@ end sub
 sub popScene()
     group = m.groups.pop()
     if isValid(group)
-        if group.isSubType("JFGroup")
+        if group.isSubType("PFGroup")
             unregisterOverhangData(group)
         end if
 
         group.visible = false
 
-        if group.isSubType("JFScreen")
+        if group.isSubType("PFScreen")
             group.callFunc("OnScreenHidden")
         end if
     else
@@ -109,7 +109,7 @@ sub popScene()
 
         m.content.replaceChild(group, 0)
 
-        if group.isSubType("JFScreen")
+        if group.isSubType("PFScreen")
             group.callFunc("OnScreenShown")
         else
             ' Restore focus
@@ -141,7 +141,7 @@ end function
 sub clearScenes()
     if m.content <> invalid then m.content.removeChildrenIndex(m.content.getChildCount(), 0)
     for each group in m.groups
-        if type(group) = "roSGNode" and group.isSubtype("JFScreen")
+        if type(group) = "roSGNode" and group.isSubtype("PFScreen")
             group.callFunc("OnScreenHidden")
         end if
     end for
@@ -205,7 +205,7 @@ sub registerOverhangData(group)
         return
     end if
 
-    if group.isSubType("JFGroup")
+    if group.isSubType("PFGroup")
         if group.overhangTitle <> invalid then m.overhang.title = group.overhangTitle
 
         if group.optionsAvailable

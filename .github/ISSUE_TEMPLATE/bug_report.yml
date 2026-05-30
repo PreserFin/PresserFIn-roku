@@ -13,9 +13,9 @@ body:
       label: "This issue respects the following points:"
       description: All conditions are **required**.
       options:
-        - label: This issue is **not** already reported on [GitHub](https://github.com/jellyfin/jellyfin-roku/issues?q=is%3Aissue) _(I've searched open and closed issues)_.
+        - label: This issue is **not** already reported on [GitHub](https://github.com/presserfin/presserfin-roku/issues?q=is%3Aissue) _(I've searched open and closed issues)_.
           required: true
-        - label: I agree to follow Jellyfin's [Code of Conduct](https://jellyfin.org/docs/general/community-standards.html#code-of-conduct).
+        - label: I agree to follow PresserFin's [Code of Conduct](https://presserfin.org/docs/general/community-standards.html#code-of-conduct).
           required: true
         - label: This report addresses only a single issue; If you encounter multiple issues, kindly create separate reports for each one.
           required: true
@@ -25,9 +25,9 @@ body:
       value: |
         ## Software Versions
   - type: input
-    id: jellyfin_server_version
+    id: presserfin_server_version
     attributes:
-      label: Jellyfin Server Version
+      label: PresserFin Server Version
       placeholder: "e.g., 10.9.11 or 10.10.3"
     validations:
       required: true

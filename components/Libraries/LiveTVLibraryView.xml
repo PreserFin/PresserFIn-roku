@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="LiveTVLibraryView" extends="JFGroup">
+<component name="LiveTVLibraryView" extends="PFGroup">
   <children>
     <LibraryItemGrid
       id="itemGrid"

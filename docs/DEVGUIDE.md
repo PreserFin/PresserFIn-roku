@@ -1,10 +1,10 @@
-# Dev Guide For The Jellyfin Roku App
+# Dev Guide For The PresserFin Roku App
 
 Follow the steps below to install the app on your personal Roku device for developing, testing and troubleshooting.
 
 Authors: [frothedoatmilk](https://github.com/frothedoatmilk), [cewert](https://github.com/cewert), [tharvik](https://github.com/tharvik), [sevenrats](https://github.com/sevenrats), [1hitsong](https://github.com/1hitsong), [neilsb](https://github.com/neilsb), [TwitchBronBron](https://github.com/TwitchBronBron), [jimdogx](https://github.com/jimdogx), [Fyb3roptik](https://github.com/Fyb3roptik), [Artiume](https://github.com/Artiume), [grasponcrypto](https://github.com/grasponcrypto)
 
-- [Dev Guide For The Jellyfin Roku App](#dev-guide-for-the-jellyfin-roku-app)
+- [Dev Guide For The PresserFin Roku App](#dev-guide-for-the-presserfin-roku-app)
   - [Developer Mode](#developer-mode)
   - [Clone the GitHub Repo](#clone-the-github-repo)
   - [Install Dependencies](#install-dependencies)
@@ -30,13 +30,13 @@ Put your Roku device in [developer mode](https://blog.roku.com/developer/2016/02
 Navigate to where you'd like to install the app then copy the application files:
 
 ```bash
-git clone https://github.com/jellyfin/jellyfin-roku.git
+git clone https://github.com/presserfin/presserfin-roku.git
 ```
 
 Open up the new folder:
 
 ```bash
-cd jellyfin-roku
+cd presserfin-roku
 ```
 
 ## Install Dependencies
@@ -60,7 +60,7 @@ We recommend using Visual Studio Code when working on this project. The [BrightS
 
 ### Usage
 
-1. Open the `jellyfin-roku` folder in VSCode
+1. Open the `presserfin-roku` folder in VSCode
 2. Press `F5` on your keyboard or click `Run` -> `Start Debugging` from the VSCode menu. ![image](https://user-images.githubusercontent.com/2544493/170696233-8ba49bf4-bebb-4655-88f3-ac45150dda02.png)
 
 3. Enter your Roku IP address and developer password when prompted
@@ -87,7 +87,7 @@ Example:
 If you want to help with testing a Release Candidate or to test a Pull Request to see if it fixes an issue for you, you can sideload the build artifact.
 
 1. Obtain the build artifact zip file.
-   - Release Candidate build artifacts will be provided by a Jellyfin Roku team member.
+   - Release Candidate build artifacts will be provided by a PresserFin Roku team member.
    - For testing a specific Pull Request, click on the "Checks" tab on the PR page and then "Build". The artifact download link is available on this page for signed-in users.
 
 2. Put the Roku in Developer Mode as mentioned [above](#developer-mode). This only needs to be done once.
@@ -98,13 +98,13 @@ If you want to help with testing a Release Candidate or to test a Pull Request t
 
 5. Click ‘Replace with zip’.
 
-Jellyfin should appear on the device. You are now testing the build artifact!
+PresserFin should appear on the device. You are now testing the build artifact!
 
-The Jellyfin install from the Roku app store is a separate app on the device and unaffected by sideloading.
+The PresserFin install from the Roku app store is a separate app on the device and unaffected by sideloading.
 
 ## Bug/Crash Reports
 
-Did the app crash? Find a nasty bug? Use this command to view the error log and [report it to the developers](https://github.com/jellyfin/jellyfin-roku/issues):
+Did the app crash? Find a nasty bug? Use this command to view the error log and [report it to the developers](https://github.com/presserfin/presserfin-roku/issues):
 
 ```bash
 telnet ${ROKU_DEV_TARGET} 8085

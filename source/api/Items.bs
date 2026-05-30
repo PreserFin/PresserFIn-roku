@@ -48,7 +48,7 @@ function ItemPostPlaybackInfo(id as string, mediaSourceId = "" as string, audioT
     if mediaSourceId <> ""
         params.MediaSourceId = mediaSourceId
     else
-        ' Note: Jellyfin v10.9 remuxs LiveTV and does not allow DirectPlay.
+        ' Note: PresserFin v10.9 remuxs LiveTV and does not allow DirectPlay.
         ' Because of this, we need to tell the server "EnableDirectPlay = false" so that we receive the
         ' transcoding URL (which is just a remux and not a transcode; unless it is)
         ' The web handles this by disabling EnableDirectPlay on a Retry, but we don't currently Retry a Live

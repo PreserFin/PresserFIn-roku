@@ -5,7 +5,7 @@
     "children": [
       {
         "title": "Remember Me?",
-        "description": "Remember the currently logged in user and try to log them in again next time you start Jellyfin.",
+        "description": "Remember the currently logged in user and try to log them in again next time you start PresserFin.",
         "settingName": "global.rememberme",
         "type": "bool",
         "default": "true"
@@ -18,7 +18,7 @@
     "children": [
       {
         "title": "Always Attempt Direct Playing Video Media",
-        "description": "Forces Jellyfin to try direct playing video media, Live TV excluded. Enabling this ignores all other playback support settings and will always first attempt direct playback. It also changes how transcode reason is displayed.",
+        "description": "Forces PresserFin to try direct playing video media, Live TV excluded. Enabling this ignores all other playback support settings and will always first attempt direct playback. It also changes how transcode reason is displayed.",
         "settingName": "attemptDirectPlay",
         "type": "bool",
         "default": "false"
@@ -250,11 +250,11 @@
       },
       {
         "title": "Media Segment Actions",
-        "description": "Settings relating to how Jellyfin should handle media segments.",
+        "description": "Settings relating to how PresserFin should handle media segments.",
         "children": [
           {
             "title": "Commercial Segments",
-            "description": "What action should Jellyfin take for commercial segments?",
+            "description": "What action should PresserFin take for commercial segments?",
             "settingName": "playback.mediasegments.commercial",
             "type": "radio",
             "default": "none",
@@ -275,7 +275,7 @@
           },
           {
             "title": "Intro Segments",
-            "description": "What action should Jellyfin take for intro segments?",
+            "description": "What action should PresserFin take for intro segments?",
             "settingName": "playback.mediasegments.intro",
             "type": "radio",
             "default": "asktoskip",
@@ -296,7 +296,7 @@
           },
           {
             "title": "Outro Segments",
-            "description": "What action should Jellyfin take for outro segments?",
+            "description": "What action should PresserFin take for outro segments?",
             "settingName": "playback.mediasegments.outro",
             "type": "radio",
             "default": "asktoskip",
@@ -317,7 +317,7 @@
           },
           {
             "title": "Preview Segments",
-            "description": "What action should Jellyfin take for preview segments?",
+            "description": "What action should PresserFin take for preview segments?",
             "settingName": "playback.mediasegments.preview",
             "type": "radio",
             "default": "none",
@@ -338,7 +338,7 @@
           },
           {
             "title": "Recap Segments",
-            "description": "What action should Jellyfin take for recap segments?",
+            "description": "What action should PresserFin take for recap segments?",
             "settingName": "playback.mediasegments.recap",
             "type": "radio",
             "default": "none",
@@ -368,7 +368,7 @@
       },
       {
         "title": "Playback Speed Controls (Experimental)",
-        "description": "Use at your own risk. We make no guarantees this will work for you. \n 1. This feature may not work on this device, yet work on others \n 2. Some speed options may not work on this device, yet work on others \n 3. Roku may block this feature without warning; even if the Jellyfin client doesn't update",
+        "description": "Use at your own risk. We make no guarantees this will work for you. \n 1. This feature may not work on this device, yet work on others \n 2. Some speed options may not work on this device, yet work on others \n 3. Roku may block this feature without warning; even if the PresserFin client doesn't update",
         "settingName": "playback.showPlaybackSpeedControls",
         "type": "bool",
         "default": "false"
@@ -762,7 +762,7 @@
           },
           {
             "title": "Hide Clock",
-            "description": "Hide all clocks in Jellyfin. Jellyfin will need to be closed and reopened for changes to take effect.",
+            "description": "Hide all clocks in PresserFin. PresserFin will need to be closed and reopened for changes to take effect.",
             "settingName": "ui.design.hideclock",
             "type": "bool",
             "default": "false"
@@ -784,7 +784,7 @@
           },
           {
             "title": "Show What's New Popup",
-            "description": "Show What's New popup when Jellyfin is updated to a new version.",
+            "description": "Show What's New popup when PresserFin is updated to a new version.",
             "settingName": "load.allowwhatsnew",
             "type": "bool",
             "default": "true"
@@ -804,7 +804,7 @@
         "children": [
           {
             "title": "Use Web Client's Home Section Arrangement",
-            "description": "Make the arrangement of the Roku home view sections match the web client's home screen. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Make the arrangement of the Roku home view sections match the web client's home screen. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "ui.home.useWebSectionArrangement",
             "type": "bool",
             "default": "true"
@@ -812,7 +812,7 @@
           {
             "title": "Section 1",
             "visible": false,
-            "description": "Select what to show in section 1. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 1. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection0",
             "type": "radio",
             "default": "smalllibrarytiles",
@@ -858,7 +858,7 @@
           {
             "title": "Section 2",
             "visible": false,
-            "description": "Select what to show in section 2. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 2. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection1",
             "type": "radio",
             "default": "resume",
@@ -904,7 +904,7 @@
           {
             "title": "Section 3",
             "visible": false,
-            "description": "Select what to show in section 3. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 3. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection2",
             "type": "radio",
             "default": "nextup",
@@ -950,7 +950,7 @@
           {
             "title": "Section 4",
             "visible": false,
-            "description": "Select what to show in section 4. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 4. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection3",
             "type": "radio",
             "default": "latestmedia",
@@ -996,7 +996,7 @@
           {
             "title": "Section 5",
             "visible": false,
-            "description": "Select what to show in section 5. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 5. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection4",
             "type": "radio",
             "default": "livetv",
@@ -1042,7 +1042,7 @@
           {
             "title": "Section 6",
             "visible": false,
-            "description": "Select what to show in section 6. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 6. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection5",
             "type": "radio",
             "default": "mylist",
@@ -1088,7 +1088,7 @@
           {
             "title": "Section 7",
             "visible": false,
-            "description": "Select what to show in section 7. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 7. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection6",
             "type": "radio",
             "default": "favorites",
@@ -1134,7 +1134,7 @@
           {
             "title": "Section 8",
             "visible": false,
-            "description": "Select what to show in section 8. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. Jellyfin will need to be closed and reopened for change to take effect.",
+            "description": "Select what to show in section 8. This setting has no effect if \"Use Web Client's Home Section Arrangement\" is enabled. PresserFin will need to be closed and reopened for change to take effect.",
             "settingName": "homeScreenSection7",
             "type": "radio",
             "default": "none",
@@ -1198,7 +1198,7 @@
         "children": [
           {
             "title": "Forget Filters",
-            "description": "Forget applied library filters when Jellyfin is closed.",
+            "description": "Forget applied library filters when PresserFin is closed.",
             "settingName": "itemgrid.forgetFilters",
             "type": "bool",
             "default": "true"

@@ -156,7 +156,7 @@ end function
 function show_dialog(message as string, options = [], defaultSelection = 0) as integer
     lastFocus = lastFocusedChild(m.scene)
 
-    dialog = createObject("roSGNode", "JFMessageDialog")
+    dialog = createObject("roSGNode", "PFMessageDialog")
     if options.count() then dialog.options = options
     if message.len() > 0
         reg = CreateObject("roFontRegistry")
@@ -243,7 +243,7 @@ function inferServerUrl(url as string) as string
                 ' TODO
                 ' if response code is a 300 redirect then we should return the redirect url
                 ' Make sure this happens or make it happen
-                if resp.GetResponseCode() = 200 and isJellyfinServer(resp.GetString())
+                if resp.GetResponseCode() = 200 and isPresserFinServer(resp.GetString())
                     selectedUrl = hosts.lookup(resp.GetSourceIdentity().ToStr())
                     return selectedUrl
                 end if
@@ -277,8 +277,8 @@ function urlCandidates(input as string)
     finalCandidates = []
     for each proto in protoCandidates:
         finalCandidates.push(ParsedUrl(`${proto}://${url.host}${urlPort}${url.path}${urlQuery}`))
-        if not isValidAndNotEmpty(url.port) ' if the port isn't defined, use default jellyfin and proto ports
-            ' jellyfin defaults
+        if not isValidAndNotEmpty(url.port) ' if the port isn't defined, use default presserfin and proto ports
+            ' presserfin defaults
             if isStringEqual(proto, "https")
                 finalCandidates.push(ParsedUrl(`${url.proto}://${url.host}:8920${url.path}${urlQuery}`))
             else if isStringEqual(proto, "http")
@@ -587,11 +587,11 @@ sub stopLoadingSpinner()
 end sub
 
 ' accepts the raw json string of /system/info/public and returns
-' a boolean indicating if ProductName is "Jellyfin Server"
-function isJellyfinServer(systemInfo as object) as boolean
+' a boolean indicating if ProductName is "PresserFin Server"
+function isPresserFinServer(systemInfo as object) as boolean
     data = ParseJson(systemInfo)
     if isValid(data) and isValid(data.ProductName)
-        return LCase(data.ProductName) = m.global.constants.jellyfin_server
+        return LCase(data.ProductName) = m.global.constants.presserfin_server
     end if
     return false
 end function

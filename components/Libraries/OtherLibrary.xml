@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="OtherLibrary" extends="JFScreen">
+<component name="OtherLibrary" extends="PFScreen">
   <children>
     <VoiceTextEditBox id="VoiceBox" visible="true" width="0" translation="[33, 40]" />
 
